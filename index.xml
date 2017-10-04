@@ -6,10 +6,20 @@
     <description>Recent content on therealplato.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Oct 2017 23:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Oct 2017 19:34:11 +1300</lastBuildDate>
     
 	<atom:link href="http://therealplato.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>#soberoctober day 4: a bit of serverless</title>
+      <link>http://therealplato.com/posts/soberoctober04/</link>
+      <pubDate>Wed, 04 Oct 2017 19:34:11 +1300</pubDate>
+      
+      <guid>http://therealplato.com/posts/soberoctober04/</guid>
+      <description>Today&amp;rsquo;s Achievements: I tried Amazon Lambda. I first heard of this &amp;ldquo;serverless&amp;rdquo; computing at Full Stack Fest 2016. You give Amazon a function and only pay for resources used as the function runs. I immediately observed that there are, in fact, still servers involved, you&amp;rsquo;re just delegating operations to Amazon.
+After I got over my pedantry and listened to this story I decided I liked the idea. Lambda can be orders of magnitudes cheaper than EC2 (for sporadic resource use,) or more expensive than EC2 (for pegged resource use.</description>
+    </item>
     
     <item>
       <title>#soberoctober day 3: blog it</title>

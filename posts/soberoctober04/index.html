@@ -7,7 +7,7 @@
 		<meta name="author" content="@therealplato">
 		<meta name="description" content="words about things that i think about">
 		<meta name="generator" content="Hugo 0.30-DEV" />
-		<title>#soberoctober day 2: out with the mold &middot; therealplato.com</title>
+		<title>#soberoctober day 4: a bit of serverless &middot; therealplato.com</title>
 		<link rel="shortcut icon" href="http://therealplato.com/images/favicon.ico">
 		<link rel="stylesheet" href="http://therealplato.com/css/style.css">
 		<link rel="stylesheet" href="http://therealplato.com/css/highlight.css">
@@ -42,12 +42,12 @@
             <article class="post">
                 <header>
                     <h1>
-                        #soberoctober day 2: out with the mold
+                        #soberoctober day 4: a bit of serverless
                     </h1>
                     <h2 class="headline">
-                    Oct 2, 2017 08:00
-                    · 165 words
-                    · 1 minute read
+                    Oct 4, 2017 19:34
+                    · 230 words
+                    · 2 minutes read
                       <span class="tags">
                       
                       </span>
@@ -57,34 +57,48 @@
                 <section id="post-body">
                     
 
-<p>Keep catching myself reaching for my e-cig, locked far away. Bought seven types of gum to try instead. &ldquo;5 Watermelon&rdquo; package indicates a
-eating the whole pack results in a laxative effect, neat! Considered buying some nicotine-free ecig liquid but that feels like cheating&hellip;</p>
+<h2 id="today-s-achievements">Today&rsquo;s Achievements:</h2>
 
-<h2 id="today-s-achievements">Today&rsquo;s Achievements</h2>
+<p>I tried Amazon Lambda.  I first heard of this &ldquo;serverless&rdquo; computing at Full Stack Fest 2016. You give Amazon a function and only pay for
+resources used as the function runs. I immediately observed that there are, in fact, still servers involved, you&rsquo;re just delegating
+operations to Amazon.</p>
 
-<ul>
-<li>Doused my moldy bedframe in sodium hydroxide</li>
-<li>Found and threw out a moldy spare pillow</li>
-<li>Yoga: for the first time in Downward Dog I touched my heels to the ground</li>
-<li>Set up Hugo and compiled these first posts from markdown</li>
-</ul>
+<p>After I got over my pedantry and listened to <a href="https://www.youtube.com/watch?v=9IrFIobZUEA&amp;t=22m10s">this story</a> I decided I liked the idea.
+Lambda can be orders of magnitudes cheaper than EC2 (for sporadic resource use,) or more expensive than EC2 (for pegged resource use.)</p>
 
-<h2 id="arch-worth-its-own-section">Arch, worth its own section&hellip;</h2>
+<h3 id="done">DONE:</h3>
 
 <ul>
-<li>Got my brightness function keys working thanks to <a href="https://github.com/jmesmon/illum">jmesmon/illum</a></li>
-<li>Learned how to close windows with awesome (default <code>super-shift-c</code>)</li>
-<li>Learned how to throw windows around workspaces (<code>super-shift-2</code>), switch workspaces, (<code>super-2</code>), reflow workspace (<code>super-space</code>)</li>
-<li>Learned why firefox was covering up all my other windows - I hit <code>super-T</code> instead of <code>ctrl-T</code>, making awesome &ldquo;keep on Top&rdquo;</li>
+<li>Created AWS account</li>
+<li>Read Lambda, DynamoDB docs and tutorieals</li>
+<li>Created IAM role, group, user</li>
+<li>Installed and configured awscli</li>
+<li>Created a streaming Dynamo table</li>
+<li>Configured the Dynamo table to communicate with Lambda</li>
+<li>Created <code>com-therealplato-counter</code> Lambda function, that receives HTTP and pings Dynamo</li>
 </ul>
 
-<h3 id="arch-wishlist">Arch wishlist:</h3>
+<h3 id="todo">TODO:</h3>
 
-<ul>
-<li>Show bandwidth use, wifi state, battery level in system tray</li>
-<li>Make my clock update DST automatically.</li>
-<li>Volume/mute hotkeys</li>
-</ul>
+<p>Fix the function! The output indicates I&rsquo;m giving Dynamo bad information:</p>
+
+<pre><code>There were 5 validation errors:\n* MissingRequiredParameter:
+Missing required key 'TableName' in params\n*
+MissingRequiredParameter: Missing required key 'Item' in
+params\n* UnexpectedParameter: Unexpected key 'Items' found
+in params\n* UnexpectedParameter: Unexpected key 'Count'
+found in params\n* UnexpectedParameter: Unexpected key
+'ScannedCount' found in params
+</code></pre>
+
+<h2 id="just-arch-things">Just Arch Things&hellip;</h2>
+
+<p>I haven&rsquo;t yet found an obvious way to make my volume keys adjust volume. Apparently I can edit xorg configuration
+files to manually map the keycodes to XF86 audio events.</p>
+
+<p>F Dat! <code>alsamixer</code> command works well enough for now.</p>
+
+<p><em>thatsthejoke.jpg</em>: <code>cool-retro-term</code> abbreviates to <code>CRT</code></p>
 
                 </section>
             </article>
