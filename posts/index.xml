@@ -6,10 +6,21 @@
     <description>Recent content in Posts on therealplato.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Oct 2017 19:34:11 +1300</lastBuildDate>
+    <lastBuildDate>Thu, 05 Oct 2017 23:55:00 +1300</lastBuildDate>
     
 	<atom:link href="http://therealplato.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>#soberoctober day 5 - JIT</title>
+      <link>http://therealplato.com/posts/soberoctober05/</link>
+      <pubDate>Thu, 05 Oct 2017 23:55:00 +1300</pubDate>
+      
+      <guid>http://therealplato.com/posts/soberoctober05/</guid>
+      <description>document.addEventListener(&#34;DOMContentLoaded&#34;, function() { $.get(&#34;https://5b567rkzxe.execute-api.us-east-2.amazonaws.com/prod/com-therealplato-counter?TableName=com-therealplato-counter&#34;, function(data, status){ if(status != &#34;success&#34;) { return } $(&#34;#counter-button&#34;).text(data.m) }) $(&#34;#counter-button&#34;).click(function(){ $.post(&#34;https://5b567rkzxe.execute-api.us-east-2.amazonaws.com/prod/com-therealplato-counter?TableName=com-therealplato-counter&#34;, {}, function(data, status){ if(status != &#34;success&#34;) { return } $(&#34;#counter-button&#34;).text(data.m) }); }); })  I barely completed this by midnight! AWS is complicated. This button hits an AWS API Gateway, which proxies to a lambda function, which reads and/or updates dynamodb:
+Button has been clicked&amp;nbsp;&amp;hellip;&amp;nbsp;times
+Arch Of The Day While trying to use two finger scrolling, I observed this entertaining behavior:</description>
+    </item>
     
     <item>
       <title>#soberoctober day 4: a bit of serverless</title>
