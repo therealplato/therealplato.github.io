@@ -6,10 +6,20 @@
     <description>Recent content in Posts on therealplato.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Oct 2017 21:21:27 +1300</lastBuildDate>
+    <lastBuildDate>Sat, 07 Oct 2017 18:26:49 +1300</lastBuildDate>
     
 	<atom:link href="http://therealplato.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>#soberoctober day 7: one of us</title>
+      <link>http://therealplato.com/posts/soberoctober07/</link>
+      <pubDate>Sat, 07 Oct 2017 18:26:49 +1300</pubDate>
+      
+      <guid>http://therealplato.com/posts/soberoctober07/</guid>
+      <description>Today&amp;rsquo;s societies are impersonal behemoths. Our governments attempt to apply identical rules to millions or billions of people with very different lives, and our media and education systems help by reinforcing expected patterns of behavior.
+I&amp;rsquo;ve deleted paragraphs from this post out of fear that society at large would punish me for sharing those bits of information. I&amp;rsquo;m not sure if those bits would result in legal consequences; if they would trigger individuals to dox, swat or DDOS me; or if no one would care.</description>
+    </item>
     
     <item>
       <title>#soberoctober day 6: 剁椒鱼头BBQ</title>
@@ -59,7 +69,7 @@ Today&amp;rsquo;s achievements:  Learned how SPF works Deployed this blog to the
       <pubDate>Mon, 02 Oct 2017 08:00:00 +0000</pubDate>
       
       <guid>http://therealplato.com/posts/soberoctober02/</guid>
-      <description>Keep catching myself reaching for my e-cig, locked far away. Bought seven types of gum to try instead. &amp;ldquo;5 Watermelon&amp;rdquo; package indicates a eating the whole pack results in a laxative effect, neat! Considered buying some nicotine-free ecig liquid but that feels like cheating&amp;hellip;
+      <description>Keep catching myself reaching for my e-cig, locked far away. Bought seven types of gum to try instead. &amp;ldquo;5 Watermelon&amp;rdquo; package indicates eating the whole pack results in a laxative effect, neat! Considered buying some nicotine-free ecig liquid but that feels like cheating&amp;hellip;
 Today&amp;rsquo;s Achievements  Doused my moldy bedframe in sodium hydroxide Found and threw out a moldy spare pillow Yoga: for the first time in Downward Dog I touched my heels to the ground Set up Hugo and compiled these first posts from markdown  Arch, worth its own section&amp;hellip;  Got my brightness function keys working thanks to jmesmon/illum Learned how to close windows with awesome (default super-shift-c) Learned how to throw windows around workspaces (super-shift-2), switch workspaces, (super-2), reflow workspace (super-space) Learned why firefox was covering up all my other windows - I hit super-T instead of ctrl-T, making awesome &amp;ldquo;keep on Top&amp;rdquo;  Arch wishlist:  Show bandwidth use, wifi state, battery level in system tray Make my clock update DST automatically.</description>
     </item>
     

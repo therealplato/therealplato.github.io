@@ -7,7 +7,7 @@
 		<meta name="author" content="@therealplato">
 		<meta name="description" content="words about things that i think about">
 		<meta name="generator" content="Hugo 0.30-DEV" />
-		<title>#soberoctober day 2: out with the mold &middot; therealplato.com</title>
+		<title>#soberoctober day 7: one of us &middot; therealplato.com</title>
 		<link rel="shortcut icon" href="http://therealplato.com/images/favicon.ico">
 		<link rel="stylesheet" href="http://therealplato.com/css/style.css">
 		<link rel="stylesheet" href="http://therealplato.com/css/highlight.css">
@@ -42,11 +42,11 @@
             <article class="post">
                 <header>
                     <h1>
-                        #soberoctober day 2: out with the mold
+                        #soberoctober day 7: one of us
                     </h1>
                     <h2 class="headline">
-                    Oct 2, 2017 08:00
-                    · 172 words
+                    Oct 7, 2017 18:26
+                    · 211 words
                     · 1 minute read
                       <span class="tags">
                       
@@ -57,35 +57,34 @@
                 <section id="post-body">
                     
 
-<p>Keep catching myself reaching for my e-cig, locked far away. Bought seven types of gum to try instead. &ldquo;5 Watermelon&rdquo; package indicates
-eating the whole pack results in a laxative effect, neat! Considered buying some nicotine-free ecig liquid but that feels like cheating&hellip;</p>
+<p>Today&rsquo;s societies are impersonal behemoths. Our governments attempt to apply identical rules to millions or billions of people with very
+different lives, and our media and education systems help by reinforcing expected patterns of behavior.</p>
 
-<h2 id="today-s-achievements">Today&rsquo;s Achievements</h2>
+<p>I&rsquo;ve deleted paragraphs from this post out of fear that society at large would punish me for sharing those bits of information. I&rsquo;m not sure
+if those bits would result in legal consequences; if they would trigger individuals to dox, swat or DDOS me; or if no one would
+care. There are rules - both laws and social conventions - that are enforced, even though I&rsquo;m not aware of them or haven&rsquo;t agreed to them.</p>
 
-<ul>
-<li>Doused my moldy bedframe in sodium hydroxide</li>
-<li>Found and threw out a moldy spare pillow</li>
-<li>Yoga: for the first time in Downward Dog I touched my heels to the ground</li>
-<li>Set up Hugo and compiled these first posts from markdown</li>
-</ul>
+<p>That&rsquo;s unjust, and gets worse when those rules are applied differently to privileged individuals.</p>
 
-<h2 id="arch-worth-its-own-section">Arch, worth its own section&hellip;</h2>
+<p>My dream society is <em>a tribe of individuals who have explicitly agreed to a set of clearly defined rules and consequences for breaking
+them</em>.</p>
 
-<ul>
-<li>Got my brightness function keys working thanks to <a href="https://github.com/jmesmon/illum">jmesmon/illum</a></li>
-<li>Learned how to close windows with awesome (default <code>super-shift-c</code>)</li>
-<li>Learned how to throw windows around workspaces (<code>super-shift-2</code>), switch workspaces, (<code>super-2</code>), reflow workspace (<code>super-space</code>)</li>
-<li>Learned why firefox was covering up all my other windows - I hit <code>super-T</code> instead of <code>ctrl-T</code>, making awesome &ldquo;keep on Top&rdquo;</li>
-</ul>
+<p>We have sufficient technology now to operate unlimited, low-cost digital tribes, with any combination of rules that humans desire to live by.</p>
 
-<h3 id="arch-wishlist">Arch wishlist:</h3>
+<p>For the rest of #soberoctober, I intend to explore this space.</p>
 
-<ul>
-<li>Show bandwidth use, wifi state, battery level in system tray</li>
-<li>Make my clock update DST automatically.<br />
-(edit: sorted after a locale switch and reboot)</li>
-<li>Volume/mute hotkeys</li>
-</ul>
+<h3 id="how-to-check-battery-level-on-arch-linux">how to check battery level on arch linux</h3>
+
+<pre><code class="language-sh"> ~ Ω batt  
+0.56
+
+ ~ Ω which batt
+batt () {
+        X=$(cat /sys/class/power_supply/BAT0/energy_now) 
+        Y=$(cat /sys/class/power_supply/BAT0/energy_full) 
+        python2 -c &quot;z=$X/$Y.; print('%.2f' % z)&quot;
+}
+</code></pre>
 
                 </section>
             </article>
