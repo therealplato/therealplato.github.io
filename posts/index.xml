@@ -20,7 +20,7 @@
       <description>Today&amp;rsquo;s project: Make a 3D Printable STL file!
 I don&amp;rsquo;t have a 3D printer but a colleague just got one and has kindly offered to collaborate if I give him an STL.
 I know that&amp;rsquo;s a filetype of 3D models but I&amp;rsquo;ve never made one. Time to figure it out.
-Inkscape  Learned to trace a rastered image into svg by placing and modifying bezier curve handles Learned to set fill of a closed path (took an embarrassingly long time)  Blender  Learned to set an object&amp;rsquo;s pivot center Learned to import and extrude an SVG Learned to convert curve to mesh Learned the boolean difference modifier Learned what a &amp;ldquo;manifold mesh&amp;rdquo; is (but not how to fix it) Learned that some 3D printers consider Y axis to be vertical  Figuring out the above and producing this stl took ~3 hours.</description>
+Inkscape  Learned to trace a rastered image into svg by placing and modifying bezier curve handles Learned to set fill of a closed path (took an embarrassingly long time)  Blender  Learned to set an object&amp;rsquo;s pivot center Learned to import and extrude an SVG Learned to convert curve to mesh Learned the boolean difference modifier Learned what a &amp;ldquo;non-manifold mesh&amp;rdquo; is (but not how to fix it) Learned that some 3D printers consider Y axis to be vertical  Figuring out the above and producing this stl took ~3 hours.</description>
     </item>
     
     <item>
