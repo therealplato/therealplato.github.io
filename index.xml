@@ -6,10 +6,22 @@
     <description>Recent content on therealplato.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Oct 2017 21:17:55 +1300</lastBuildDate>
+    <lastBuildDate>Mon, 09 Oct 2017 21:42:44 +1300</lastBuildDate>
     
 	<atom:link href="http://therealplato.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>#soberoctober day 9: blender looks easy amirite</title>
+      <link>http://therealplato.com/posts/soberoctober09/</link>
+      <pubDate>Mon, 09 Oct 2017 21:42:44 +1300</pubDate>
+      
+      <guid>http://therealplato.com/posts/soberoctober09/</guid>
+      <description>Today&amp;rsquo;s project: Make a 3D Printable STL file!
+I don&amp;rsquo;t have a 3D printer but a colleague just got one and has kindly offered to collaborate if I give him an STL.
+I know that&amp;rsquo;s a filetype of 3D models but I&amp;rsquo;ve never made one. Time to figure it out.
+Inkscape  Learned to trace a rastered image into svg by placing and modifying bezier curve handles Learned to set fill of a closed path (took an embarrassingly long time)  Blender  Learned to set an object&amp;rsquo;s pivot center Learned to import and extrude an SVG Learned to convert curve to mesh Learned the boolean difference modifier Learned what a &amp;ldquo;manifold mesh&amp;rdquo; is (but not how to fix it) Learned that some 3D printers consider Y axis to be vertical  Figuring out the above and producing this stl took ~3 hours.</description>
+    </item>
     
     <item>
       <title>#soberoctober day 8: interplanetary file system</title>
