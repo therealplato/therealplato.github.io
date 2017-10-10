@@ -6,10 +6,22 @@
     <description>Recent content on therealplato.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Oct 2017 21:42:44 +1300</lastBuildDate>
+    <lastBuildDate>Tue, 10 Oct 2017 21:27:08 +1300</lastBuildDate>
     
 	<atom:link href="http://therealplato.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>#soberoctober day 10: svg ftw (edit: not yet)</title>
+      <link>http://therealplato.com/posts/soberoctober10/</link>
+      <pubDate>Tue, 10 Oct 2017 21:27:08 +1300</pubDate>
+      
+      <guid>http://therealplato.com/posts/soberoctober10/</guid>
+      <description>Long day today, leaving me with no time to dive deep into SVG Animations by Sarah Drasner (O&amp;rsquo;Reilly). Copyright 2017 Sarah Drasner, 978-1-491-93970-3.
+Let&amp;rsquo;s see what I can get done with an hour and some lipsum&amp;hellip;
+ &amp;hellip; Not very far. My objective was to make an arrow that starts pointing down and animates to point up as you scroll down the page.
+After conceding that was not a newbie task, I just looped the animation.</description>
+    </item>
     
     <item>
       <title>#soberoctober day 9: blender looks easy amirite</title>
