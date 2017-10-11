@@ -1,0 +1,214 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="@therealplato">
+		<meta name="description" content="words about things that i think about">
+		<meta name="generator" content="Hugo 0.30-DEV" />
+		<title>#soberoctober day 11: CLI timezone conversion &middot; therealplato.com</title>
+		<link rel="shortcut icon" href="http://therealplato.com/images/favicon.ico">
+		<link rel="stylesheet" href="http://therealplato.com/css/style.css">
+		<link rel="stylesheet" href="http://therealplato.com/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="http://therealplato.com/css/font-awesome.min.css">
+		
+
+		
+		<link href="http://therealplato.com/index.xml" rel="alternate" type="application/rss+xml" title="therealplato.com" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://therealplato.com/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='http://therealplato.com/posts'>Archive</a>
+
+	
+
+	
+  <a class="cta" href="http://therealplato.com/index.xml">RSS&nbsp;<i class="fa fa-rss" aria-hidden="true"></i></a>
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        #soberoctober day 11: CLI timezone conversion
+                    </h1>
+                    <h2 class="headline">
+                    Oct 11, 2017 22:12
+                    · 547 words
+                    · 3 minutes read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>Movio has offices in US, UK, DE, NZ and has clients globally. I frequently find myself asking &ldquo;Is it office hours in the US? Is it the middle
+of the night in Asia?&rdquo; We keep records with UTC timestamps (as all programmers should!) but it&rsquo;s still difficult to conceptualize and
+mentally convert timezones.</p>
+
+<p>In the past, I&rsquo;ve used several helpful tools:</p>
+
+<ul>
+<li>The excellent <a href="https://www.timeanddate.com/worldclock/converter.html?iso=20171010T100100&amp;p1=22&amp;p2=tz_pt">timeanddate.com converter</a> gives you multiple zones and the
+ability to type or drag to set any zone to any time.</li>
+<li>I&rsquo;ve used my Android 6.x phone as a reference, because its stock clock app supports multiple timezones.</li>
+<li>OSX does not support multiple clocks, wtf? I have recently installed the third party &ldquo;Hour - World Clock&rdquo; from App Store, which gives me a multi-clock dropdown from my OSX taskbar.</li>
+</ul>
+
+<p>I like the portability and scriptability of CLI solutions so I have started work on a tool to answer my timezone questions.</p>
+
+<p>Introducing <a href="https://github.com/therealplato/timez"><code>timez</code></a>:</p>
+
+<pre><code>~ Ω go get -u github.com/therealplato/timez
+~ Ω timez
+Pacific/Auckland: 2017-10-11 22:35:39
+UTC: 2017-10-11 09:35:39
+
+~ Ω timez US/Eastern Asia/Shanghai
+US/Eastern: 2017-10-11 05:36:59
+Asia/Shanghai: 2017-10-11 17:36:59
+
+~ Ω timez ET central mt US/Pacific
+US/Eastern: 2017-10-11 05:38:11
+US/Central: 2017-10-11 04:38:11
+US/Mountain: 2017-10-11 03:38:11
+US/Pacific: 2017-10-11 02:38:11
+</code></pre>
+
+<p>That&rsquo;s all I&rsquo;ve had time for this evening - setting Pacific/Auckland as a default, parsing timezone strings you pass, and setting some
+aliases.  My next steps are documented in the repo&rsquo;s <a href="https://github.com/therealplato/timez">readme</a>.</p>
+
+<p><a id="DI"></a></p>
+
+<h3 id="quick-pattern-dependency-injection">Quick Pattern - Dependency Injection</h3>
+
+<p>If <code>timez</code> does not see a timestamp in its CLI args, it assumes you&rsquo;re asking about the current time.
+My first testcase is for such a scenario:</p>
+
+<pre><code class="language-go">type testcase struct {
+	name     string
+	input    string
+	expected string
+}
+testcase{&quot;empty input&quot;, &quot;&quot;,
+`Pacific/Auckland: 2017-10-10 23:01:30
+UTC: 2017-10-10 10:01:30
+`},
+</code></pre>
+
+<p>There&rsquo;s a problem - I can&rsquo;t control the time or timezone when you run the tests. <code>time.Now()</code> is going to return something that does not
+match my <code>testcase.expected</code>. The solution is probably the most valuable programming skill I know: &ldquo;dependency injection.&rdquo;</p>
+
+<p>DI means that I pass code responsible for child behaviors into the function responsible for parent behaviors, instead of the parent
+implementing all behaviors. My parent behavior is &ldquo;if there are no arguments, return the local timezone and current time.&rdquo;
+My child behaviors are &ldquo;determine the local timezone&rdquo; and &ldquo;determine the current time&rdquo;.</p>
+
+<p>You can also inject state variables, but I&rsquo;m not using any here.</p>
+
+<pre><code class="language-go">func timez(c clocker, z zoner, args []string) string {
+  t0 = c.Now()
+  z0 = z.Zone()
+  return z0+t0   // simplified
+</code></pre>
+
+<p>If my main function is executing, I inject the &ldquo;real&rdquo; dependencies into <code>timez</code> :</p>
+
+<pre><code class="language-go">func main() {
+  c := &amp;clock{}
+  z := &amp;zone{}
+  timez(c, z, args)
+}
+</code></pre>
+
+<p>But when I&rsquo;m testing <code>timez</code>, I pass it a mock clock and timezone, whose values I can control:</p>
+
+<pre><code class="language-go">z0, err := time.LoadLocation(&quot;Pacific/Auckland&quot;)
+z := &amp;mockZone{}
+z.On(&quot;Zone&quot;).Return(z0)
+
+t0, err := time.Parse(&quot;2006-01-02 15:04:05-0700&quot;, &quot;2017-10-10 23:01:30+1300&quot;)
+c := &amp;mockClock{}
+c.On(&quot;Now&quot;).Return(t0)
+
+out := timez(c, z, args)
+</code></pre>
+
+<p>Passing these different types to the same functions works thanks to Go&rsquo;s interfaces. In the <code>timez</code> function signature you saw it accepts <code>clocker</code>:</p>
+
+<pre><code class="language-go">type clocker interface {
+	Now() time.Time
+}
+</code></pre>
+
+<p>Both my <code>clock</code> and <code>mockClock</code> types have a method <code>Now()</code> returning a <code>time.Time</code>. Thus they both &ldquo;fulfil the <code>clocker</code> interface&rdquo; and are
+acceptable inputs to the <code>timez</code> function. You can see both <code>clock</code> and <code>mockClock</code> implementations in
+<a href="https://github.com/therealplato/timez/blob/6c25bf2b3d2d571b353d8c106605ec933f12f585/clock.go"><code>clock.go</code></a>.</p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://github.com/therealplato">
+        <i class="fa fa-github-square"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/therealplato">
+        <i class="fa fa-twitter-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+    
+    <br>Generated by <a href="http://www.gohugo.io/">Hugo</a> from <a href="https://github.com/therealplato/therealplato.com">this
+      source</a>.
+    <br>Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    <br><i class="fa fa-heart" aria-hidden="true"></i> @therealplato
+    </p>
+</footer>
+
+        </section>
+
+        <script src="http://therealplato.com/js/jquery-2.2.4.min.js"></script>
+<script src="http://therealplato.com/js/main.js"></script>
+<script src="http://therealplato.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>
