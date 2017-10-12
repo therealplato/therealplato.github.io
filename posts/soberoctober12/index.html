@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en-us">
 	<head>
 		<meta charset="utf-8">
@@ -7,7 +7,7 @@
 		<meta name="author" content="@therealplato">
 		<meta name="description" content="words about things that i think about">
 		<meta name="generator" content="Hugo 0.30-DEV" />
-		<title>therealplato.com</title>
+		<title>#soberoctober day 12: finishing timez &middot; therealplato.com</title>
 		<link rel="shortcut icon" href="http://therealplato.com/images/favicon.ico">
 		<link rel="stylesheet" href="http://therealplato.com/css/style.css">
 		<link rel="stylesheet" href="http://therealplato.com/css/highlight.css">
@@ -22,9 +22,11 @@
 		
 	</head>
 
-	<body>
-    <nav class="main-nav">
+    <body>
+       <nav class="main-nav">
 	
+	
+		<a href='http://therealplato.com/'> <span class="arrow">←</span>Home</a>
 	
 	<a href='http://therealplato.com/posts'>Archive</a>
 
@@ -36,57 +38,49 @@
 </nav>
 
 
-    <div class="profile">
-    <section id="wrapper">
-        <header id="header">
-            <a href='http://therealplato.com/about'>
-                <img id="avatar" class="2x" src="http://therealplato.com/images/avatar.png"/>
-            </a>
-            <h1>@therealplato</h1>
-            <h2>I crossed the United States spending only Bitcoin in 2012. Now I&rsquo;m a golang developer for <a href="https://movio.co">movio.co</a> in Auckland.</h2>
-        </header>
-    </section>
-</div>
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        #soberoctober day 12: finishing timez
+                    </h1>
+                    <h2 class="headline">
+                    Oct 12, 2017 23:18
+                    · 88 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p>Nothing special to report, I spent the evening improving yesterday&rsquo;s <a href="https://github.com/therealplato/timez"><code>timez</code> project</a>.</p>
 
+<p>I split up my complicated <code>parse()</code> function, added many testcases, added some new aliases and formatting strings, loaded local timezones
+from ~/.timezrc or <code>date</code> binary, and added docs.</p>
 
-    <section id="wrapper" class="home">
-        <ul id="post-list">
-    
-    
-        
-            <li>
-                <a href='http://therealplato.com/posts/soberoctober02/'><aside class="dates">Oct 2</aside></a>
-                <a href='http://therealplato.com/posts/soberoctober02/'>
-                    #soberoctober day 2: out with the mold <h2></h2>
-                </a>
-            </li>
-        
-    
-    
-        
-            <li>
-                <a href='http://therealplato.com/posts/soberoctober01/'><aside class="dates">Oct 1</aside></a>
-                <a href='http://therealplato.com/posts/soberoctober01/'>
-                    #soberoctober day 1: challenge accepted <h2></h2>
-                </a>
-            </li>
-        
-    
-</ul>
+<p>I was tickled to see it work across DST boundaries:</p>
 
-        <nav id="post-nav">
-    
-        
-        <span class="prev">
-            <a href="/">
-                <span class="arrow">←</span> Newer Posts
-            </a>
-        </span>
-        
-        
-    
-</nav>
-        <footer id="footer">
+<pre><code>content/posts Ω timez UTC at 2017-09-24 02:59:00 Pacific/Auckland
+UTC: 2017-09-23 14:59:00
+
+content/posts Ω timez UTC at 2017-09-24 03:01:00 Pacific/Auckland
+UTC: 2017-09-23 14:01:00
+</code></pre>
+
+<p>I did it for me, but I&rsquo;d love to hear if you also find <code>github.com/therealplato/timez</code> useful!</p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
     
         <div id="social">
 
@@ -115,9 +109,9 @@
     </p>
 </footer>
 
-    </section>
+        </section>
 
-    <script src="http://therealplato.com/js/jquery-2.2.4.min.js"></script>
+        <script src="http://therealplato.com/js/jquery-2.2.4.min.js"></script>
 <script src="http://therealplato.com/js/main.js"></script>
 <script src="http://therealplato.com/js/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
