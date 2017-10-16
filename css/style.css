@@ -172,12 +172,28 @@ h2 {
 
 nav.main-nav {
     padding: 20px 20px 0;
-    background: #fff;
-    background: rgba(255, 255, 255, .90);
+    /*
     margin: 0 auto;
     text-align: right;
+    */
+
     z-index: 100;
+
+    position: fixed;
+    width: 100%;
+    display:flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
 }
+nav.main-nav .nav-spacer {
+  flex-grow:1;
+}
+nav.scrim{
+  background: #fff;
+  background: rgba(255, 255, 255, .90);
+}
+
 
 nav.main-nav a {
     top: 8px;
@@ -196,11 +212,12 @@ nav.main-nav a.cta {
 }
 @media (max-width: 700px) {
   nav.main-nav {
-      padding: 20px 10px 0 0;
+      padding: 10px 20px 0;
+      /* padding: 20px 10px 0 0; */
       background: #fff;
-      background: rgba(255, 255, 255, .90);
-      margin: 0 auto;
-      text-align: right;
+      /* background: rgba(255, 255, 255, .90); */
+      /* margin: 0 auto; */
+      /* text-align: right; */
       z-index: 100;
   }
   nav.main-nav a {
@@ -220,7 +237,7 @@ nav.main-nav a.cta {
 }
 
 #wrapper {
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
     padding: 60px 40px 100px 40px;
 }

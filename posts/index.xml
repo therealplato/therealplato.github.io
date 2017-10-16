@@ -6,10 +6,20 @@
     <description>Recent content in Posts on therealplato.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Oct 2017 21:27:29 +1300</lastBuildDate>
+    <lastBuildDate>Mon, 16 Oct 2017 22:56:18 +1300</lastBuildDate>
     
 	<atom:link href="http://therealplato.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>#soberoctober day 16: now with previous/next links!</title>
+      <link>http://therealplato.com/posts/soberoctober16/</link>
+      <pubDate>Mon, 16 Oct 2017 22:56:18 +1300</pubDate>
+      
+      <guid>http://therealplato.com/posts/soberoctober16/</guid>
+      <description>Today my colleague delivered the 3D print of my day 9 STL file. We printed it at approximately 20mm*20mm*4mm to verify that I got everything right. Other than orienting Y-axis up instead of correct Z-axis up, the scale and mesh were fine and produced a print with excellent fine detail. Now I&amp;rsquo;m working on the full scale project, which will be a sign for the company dishwasher.
+I&amp;rsquo;m getting stronger with my kettlebell.</description>
+    </item>
     
     <item>
       <title>#soberoctober day 15: what is a rule, anyway</title>
