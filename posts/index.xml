@@ -6,10 +6,21 @@
     <description>Recent content in Posts on therealplato.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Oct 2017 23:13:27 +1300</lastBuildDate>
+    <lastBuildDate>Wed, 18 Oct 2017 20:37:25 +1300</lastBuildDate>
     
 	<atom:link href="http://therealplato.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>#soberoctober day 18: coding rules</title>
+      <link>http://therealplato.com/posts/soberoctober18/</link>
+      <pubDate>Wed, 18 Oct 2017 20:37:25 +1300</pubDate>
+      
+      <guid>http://therealplato.com/posts/soberoctober18/</guid>
+      <description>Tonight I&amp;rsquo;ve begun formalizing my definition from day 15, continuing to work towards the goal of programmatic rules.
+ N.B: In this post I use the word &amp;ldquo;behavior&amp;rdquo; to apply to both code (where it means: business logic, described by a function signature, implemented by code) and also to humans (where it means: things humans do.) Sorry for any confusion.
+ A key behavior of a rule is does it apply in this scenario?</description>
+    </item>
     
     <item>
       <title>#soberoctober day 17: i dont even blender</title>
