@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://therealplato.com/posts/soberoctober19/</loc>
+    <lastmod>2017-10-19T22:40:00+13:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://therealplato.com/posts/soberoctober18/</loc>
     <lastmod>2017-10-18T20:37:25+13:00</lastmod>
   </url>
@@ -99,7 +104,7 @@
   
   <url>
     <loc>http://therealplato.com/posts/</loc>
-    <lastmod>2017-10-18T20:37:25+13:00</lastmod>
+    <lastmod>2017-10-19T22:40:00+13:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -110,7 +115,7 @@
   
   <url>
     <loc>http://therealplato.com/</loc>
-    <lastmod>2017-10-18T20:37:25+13:00</lastmod>
+    <lastmod>2017-10-19T22:40:00+13:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -6,10 +6,21 @@
     <description>Recent content in Posts on therealplato.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Oct 2017 20:37:25 +1300</lastBuildDate>
+    <lastBuildDate>Thu, 19 Oct 2017 22:40:00 +1300</lastBuildDate>
     
 	<atom:link href="http://therealplato.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>#soberoctober day 19: blag filler</title>
+      <link>http://therealplato.com/posts/soberoctober19/</link>
+      <pubDate>Thu, 19 Oct 2017 22:40:00 +1300</pubDate>
+      
+      <guid>http://therealplato.com/posts/soberoctober19/</guid>
+      <description>Nothing impressive to report after a long workday followed by a long nap.
+I caved and bought some rice krispy treat flavored ecig juice with 0% nicotine.
+Over the upcoming long weekend I plan to continue work on my subverse.Identity code. I&amp;rsquo;d like to implement grouping a set of identities as children of a parent identity, defining your own alias identities that point to other people, and implement &amp;ldquo;trust tiers&amp;rdquo; (trust spheres?</description>
+    </item>
     
     <item>
       <title>#soberoctober day 18: coding rules</title>
