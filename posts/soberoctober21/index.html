@@ -7,7 +7,7 @@
 		<meta name="author" content="@therealplato">
 		<meta name="description" content="words about things that i think about">
 		<meta name="generator" content="Hugo 0.30-DEV" />
-		<title>#soberoctober day 20: crypto wip &middot; therealplato.com</title>
+		<title>#soberoctober day 21: combinatorics beat me &middot; therealplato.com</title>
 		<link rel="shortcut icon" href="http://therealplato.com/images/favicon.ico">
 		<link rel="stylesheet" href="http://therealplato.com/css/style.css">
 		<link rel="stylesheet" href="http://therealplato.com/css/highlight.css">
@@ -34,14 +34,10 @@
   <span class="nav-spacer"></span>
 
 
-  <a href="http://therealplato.com/posts/soberoctober19/" class="older-link scrim" title="#soberoctober day 19: blag filler">
+  <a href="http://therealplato.com/posts/soberoctober20/" class="older-link scrim" title="#soberoctober day 20: crypto wip">
     <span class="nav-chevron">Previous</span>
   </a>
 
-
-  <a href="http://therealplato.com/posts/soberoctober21/" class="newer-link scrim" title="#soberoctober day 21: combinatorics beat me">
-     <span class="nav-chevron">Next</span>
-  </a>
 
 
 
@@ -56,12 +52,12 @@
             <article class="post">
                 <header>
                     <h1>
-                        #soberoctober day 20: crypto wip
+                        #soberoctober day 21: combinatorics beat me
                     </h1>
                     <h2 class="headline">
-                    Oct 20, 2017 21:55
-                    · 27 words
-                    · 1 minute read
+                    Oct 21, 2017 23:50
+                    · 243 words
+                    · 2 minutes read
                       <span class="tags">
                       
                       </span>
@@ -69,12 +65,37 @@
                 </header>
                 
                 <section id="post-body">
-                    <p><a href="https://github.com/therealplato/Subverse/commit/17fff672aa4866c022a3c1a7690a64eb74f9ecb1">Began implementing</a> <code>CryptoIdentity</code> and
-<code>ECDSAIdentity</code>.</p>
+                    
 
-<p>Small steps towards the goal of proving authorship of content.</p>
+<h2 id="fun">fun:</h2>
 
-<p>It&rsquo;s not done or tested, so not worth elaborating on yet. ¯\<em>(ツ)</em>/¯</p>
+<p>I&rsquo;m still having a real blast playing Magic downtown at <a href="http://www.yourlocalgameshop.com/">King Of Cards</a>. I won about $6 worth of cards
+after entering a free &ldquo;Standard Showdown&rdquo; tournament with a borrowed deck. Neat.</p>
+
+<p>After the shop closed, I spent a good hour looking at all the custom playmats available at <a href="https://inkedgaming.com">Inked Gaming</a>. There&rsquo;s
+a bunch of nice ones but I want to design one that has the Golang gopher on it. Playmats are just soft mats you put your cards on. They
+can protect cards from the table surface, but since I use card sleeves, I&rsquo;d only be buying one for the looks.</p>
+
+<h2 id="more-fun">more fun:</h2>
+
+<p><strong>@pltvs</strong> from the Gophers slack linked a <a href="http://pliutau.com/practice-go-secret-message/">Go challenge</a>. My solution used the same basic approach as other submissions but mine&rsquo;s <a href="https://github.com/plutov/practice-go/pull/33/commits/f56f032edb0a203c85093b07550a7bd285378990">a bit slower</a>.</p>
+
+<h2 id="aaargh">aaargh:</h2>
+
+<p>After pull-requesting that submission, I spotted a failed travis build and decided to fix it. Then I ate humble pie because the failure stems
+from a challenge I can&rsquo;t solve yet. I&rsquo;ll <a href="https://github.com/plutov/practice-go/tree/master/coins">paraphrase it</a> as:</p>
+
+<blockquote>
+<p>Given <em>n</em> coins, separate them into <em>m</em> piles of size <em>m1</em>, <em>m2</em>&hellip;<br />
+What is the size of the set of pile sizes?<br />
+For example, the set of pile sizes for:<br />
+<em>n=3</em> is <em>(3) (2 1) (1 1 1)</em><br />
+<em>n=4</em> is <em>(4) (3 1) (2 2) (2 1 1) (1 1 1 1)</em><br />
+and the size of those sets are 3 and 5 respectively.</p>
+</blockquote>
+
+<p>If you&rsquo;ve got a solution, <a href="https://github.com/plutov/practice-go/blob/master/coins/coins.go">populate this function</a>, run the tests, and
+open a PR!</p>
 
                 </section>
             </article>

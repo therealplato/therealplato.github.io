@@ -6,10 +6,20 @@
     <description>Recent content on therealplato.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Oct 2017 21:55:56 +1300</lastBuildDate>
+    <lastBuildDate>Sat, 21 Oct 2017 23:50:52 +1300</lastBuildDate>
     
 	<atom:link href="http://therealplato.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>#soberoctober day 21: combinatorics beat me</title>
+      <link>http://therealplato.com/posts/soberoctober21/</link>
+      <pubDate>Sat, 21 Oct 2017 23:50:52 +1300</pubDate>
+      
+      <guid>http://therealplato.com/posts/soberoctober21/</guid>
+      <description>fun: I&amp;rsquo;m still having a real blast playing Magic downtown at King Of Cards. I won about $6 worth of cards after entering a free &amp;ldquo;Standard Showdown&amp;rdquo; tournament with a borrowed deck. Neat.
+After the shop closed, I spent a good hour looking at all the custom playmats available at Inked Gaming. There&amp;rsquo;s a bunch of nice ones but I want to design one that has the Golang gopher on it.</description>
+    </item>
     
     <item>
       <title>#soberoctober day 20: crypto wip</title>
