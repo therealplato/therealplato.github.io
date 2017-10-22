@@ -1,0 +1,176 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="@therealplato">
+		<meta name="description" content="words about things that i think about">
+		<meta name="generator" content="Hugo 0.30-DEV" />
+		<title>#soberoctober day 22: preparing to chart F1 data &middot; therealplato.com</title>
+		<link rel="shortcut icon" href="http://therealplato.com/images/favicon.ico">
+		<link rel="stylesheet" href="http://therealplato.com/css/style.css">
+		<link rel="stylesheet" href="http://therealplato.com/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="http://therealplato.com/css/font-awesome.min.css">
+		
+
+		
+		<link href="http://therealplato.com/index.xml" rel="alternate" type="application/rss+xml" title="therealplato.com" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a class="scrim" href='http://therealplato.com/'> <span class="arrow">←</span>Home</a>
+	
+	<a class="scrim" href='http://therealplato.com/posts'>Archive</a>
+
+	
+  <span class="nav-spacer"></span>
+
+
+  <a href="http://therealplato.com/posts/soberoctober21/" class="older-link scrim" title="#soberoctober day 21: combinatorics beat me">
+    <span class="nav-chevron">Previous</span>
+  </a>
+
+
+
+
+
+	
+  <a class="cta" href="http://therealplato.com/index.xml">RSS&nbsp;<i class="fa fa-rss" aria-hidden="true"></i></a>
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        #soberoctober day 22: preparing to chart F1 data
+                    </h1>
+                    <h2 class="headline">
+                    Oct 22, 2017 22:25
+                    · 352 words
+                    · 2 minutes read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>I&rsquo;d like to know the answer to &ldquo;How did lap times evolve throughout the years of the F1 Suzuka Grand Prix?&rdquo;</p>
+
+<p>I found an excellent data source: the
+<a href="http://ergast.com/mrd/methods/laps/">ergast.com API</a>. The &ldquo;lap times&rdquo; docs
+indicate that this dataset is available for races since 1996. First I&rsquo;ll look
+up the index of the Suzuka GP for each year, since sometimes circuits get added
+or dropped:</p>
+
+<pre><code>#!/bin/bash
+# find Suzuka race number:
+years=(1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017)
+for y in ${years[@]}; do
+  # respect the API by not redownloading and rate limiting:
+  if [ ! -f $y.json ]; then
+    curl -so $y.json http://ergast.com/api/f1/$y/circuits.json
+    sleep 1
+  fi
+  i=$(cat $y.json | jq '.MRData .CircuitTable .Circuits |map(.circuitId) | index(&quot;suzuka&quot;)')
+  echo &quot;http://ergast.com/api/f1/$y/$i/laps&quot;
+done
+</code></pre>
+
+<p>From the output, I note that that 2007 and 2008 have an index of <code>null</code>. I
+wonder why the races were not run? Maybe that was the &ldquo;Fuji&rdquo; circuit I&rsquo;ve heard
+of? All other years, it&rsquo;s either the 14th, 15th or 16th race of the season.</p>
+
+<pre><code># get lap times for the race
+curl -o 1996.json http://ergast.com/api/f1/1996/14/laps?limit=1000
+</code></pre>
+
+<p>The 1996 race has a lot of names I recognize! Shumacher, Brundle, Herbert, Verstappen&hellip; Also, it looks like very few drivers finished.</p>
+
+<p>Several races have a lap count exceeding the API query limit of 1000 so I need to make additional queries and join the datasets. I&rsquo;ll manually copy and paste the second page of results into the first page; I don&rsquo;t think it&rsquo;s worth automating.</p>
+
+<p>If I do this again I&rsquo;ll run local sql queries against <a href="https://github.com/jcnewell/ergast-f1-api">this docker image</a> instead of wrangling JSON.</p>
+
+<h3 id="bonus-arch-linux-hack">Bonus Arch Linux hack:</h3>
+
+<p>Since Arch comes with basically nothing, you have to install everything. And sometimes it&rsquo;s not obvious where it lives. I wrote an alias
+that searches Pacman&rsquo;s database of not-yet-installed packages for the command you&rsquo;re trying to find:</p>
+
+<pre><code> suzuka/circuit Ω pacwut jq
+usr/bin/jq is owned by community/jq 1.5-5
+
+ suzuka/circuit Ω which pacwut
+pacwut () {
+        pacman -Fo $@
+        pacman -Fo /bin/$@
+        pacman -Fo /usr/bin/$@
+        pacman -Fo /usr/local/bin/$@
+}
+ suzuka/circuit Ω sudo pacman -S community/jq
+</code></pre>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://github.com/therealplato">
+        <i class="fa fa-github-square"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/therealplato">
+        <i class="fa fa-twitter-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+    
+    <br>Generated by <a href="http://www.gohugo.io/">Hugo</a> from <a href="https://github.com/therealplato/therealplato.com">this
+      source</a>.
+    <br>Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    <br><i class="fa fa-heart" aria-hidden="true"></i> @therealplato
+    </p>
+</footer>
+
+        </section>
+
+        <script src="http://therealplato.com/js/jquery-2.2.4.min.js"></script>
+<script src="http://therealplato.com/js/main.js"></script>
+<script src="http://therealplato.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>

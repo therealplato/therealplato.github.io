@@ -6,10 +6,21 @@
     <description>Recent content in Posts on therealplato.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Oct 2017 23:50:52 +1300</lastBuildDate>
+    <lastBuildDate>Sun, 22 Oct 2017 22:25:25 +1300</lastBuildDate>
     
 	<atom:link href="http://therealplato.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>#soberoctober day 22: preparing to chart F1 data</title>
+      <link>http://therealplato.com/posts/soberoctober22/</link>
+      <pubDate>Sun, 22 Oct 2017 22:25:25 +1300</pubDate>
+      
+      <guid>http://therealplato.com/posts/soberoctober22/</guid>
+      <description>I&amp;rsquo;d like to know the answer to &amp;ldquo;How did lap times evolve throughout the years of the F1 Suzuka Grand Prix?&amp;rdquo;
+I found an excellent data source: the ergast.com API. The &amp;ldquo;lap times&amp;rdquo; docs indicate that this dataset is available for races since 1996. First I&amp;rsquo;ll look up the index of the Suzuka GP for each year, since sometimes circuits get added or dropped:
+#!/bin/bash # find Suzuka race number: years=(1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017) for y in ${years[@]}; do # respect the API by not redownloading and rate limiting: if [ !</description>
+    </item>
     
     <item>
       <title>#soberoctober day 21: combinatorics beat me</title>
