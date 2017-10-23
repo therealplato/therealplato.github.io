@@ -39,6 +39,10 @@
   </a>
 
 
+  <a href="http://therealplato.com/posts/soberoctober23/" class="newer-link scrim" title="#soberoctober day 23: charting f1 (barely)">
+     <span class="nav-chevron">Next</span>
+  </a>
+
 
 
 
@@ -56,8 +60,8 @@
                     </h1>
                     <h2 class="headline">
                     Oct 22, 2017 22:25
-                    · 352 words
-                    · 2 minutes read
+                    · 428 words
+                    · 3 minutes read
                       <span class="tags">
                       
                       </span>
@@ -102,6 +106,13 @@ curl -o 1996.json http://ergast.com/api/f1/1996/14/laps?limit=1000
 <p>Several races have a lap count exceeding the API query limit of 1000 so I need to make additional queries and join the datasets. I&rsquo;ll manually copy and paste the second page of results into the first page; I don&rsquo;t think it&rsquo;s worth automating.</p>
 
 <p>If I do this again I&rsquo;ll run local sql queries against <a href="https://github.com/jcnewell/ergast-f1-api">this docker image</a> instead of wrangling JSON.</p>
+
+<p><em>edit</em> This ended up taking hours of struggling with JQ. I stubbornly refused to try docker after seeing they don&rsquo;t release linux versions
+and Arch&rsquo;s requires screwing with kernel modules. The hardest bit was figuring out how to make JQ turn a sequence of objects into an array
+of those objects. It&rsquo;s the &ldquo;slurp&rdquo; flag.</p>
+
+<pre><code>cat &lt;(cat 1999.json| jq '.MRData .RaceTable .Races[] .Laps[]') &lt;(cat 1999.1.json| jq '.MRData .RaceTable .Races[] .Laps[]') | jq -s '.' &gt; 1999.laps.json
+</code></pre>
 
 <h3 id="bonus-arch-linux-hack">Bonus Arch Linux hack:</h3>
 
