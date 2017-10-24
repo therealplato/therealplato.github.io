@@ -6,10 +6,20 @@
     <description>Recent content in Posts on therealplato.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Oct 2017 12:19:02 +1300</lastBuildDate>
+    <lastBuildDate>Tue, 24 Oct 2017 21:41:48 +1300</lastBuildDate>
     
 	<atom:link href="http://therealplato.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>#soberoctober day 24</title>
+      <link>http://therealplato.com/posts/soberoctober24/</link>
+      <pubDate>Tue, 24 Oct 2017 21:41:48 +1300</pubDate>
+      
+      <guid>http://therealplato.com/posts/soberoctober24/</guid>
+      <description>I was gonna make a sweet-ass graph that put yesterday&amp;rsquo;s to shame but then I watched some youtube and now it&amp;rsquo;s 21:45. I&amp;rsquo;ll give it a go anyway!
+# get timing data for one driver&#39;s race: suzuka/laps Ω cat 2001.laps.json |\ jq &#39;.[] .Timings[] |select(.driverId == &amp;quot;alonso&amp;quot;) .time&#39; |\ jq -s &#39;.&#39; &amp;gt; ../../hugosite/static/misc/2001.alonso.laps.json   @23:27 - Meh. I&amp;rsquo;ll take it. I learned how to deal with margins, how to draw and position axes, how to zero pad numbers.</description>
+    </item>
     
     <item>
       <title>#soberoctober day 23: charting f1 (barely)</title>

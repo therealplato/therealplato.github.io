@@ -7,7 +7,7 @@
 		<meta name="author" content="@therealplato">
 		<meta name="description" content="words about things that i think about">
 		<meta name="generator" content="Hugo 0.30-DEV" />
-		<title>#soberoctober day 23: charting f1 (barely) &middot; therealplato.com</title>
+		<title>#soberoctober day 24 &middot; therealplato.com</title>
 		<link rel="shortcut icon" href="http://therealplato.com/images/favicon.ico">
 		<link rel="stylesheet" href="http://therealplato.com/css/style.css">
 		<link rel="stylesheet" href="http://therealplato.com/css/highlight.css">
@@ -34,14 +34,10 @@
   <span class="nav-spacer"></span>
 
 
-  <a href="http://therealplato.com/posts/soberoctober22/" class="older-link scrim" title="#soberoctober day 22: preparing to chart F1 data">
+  <a href="http://therealplato.com/posts/soberoctober23/" class="older-link scrim" title="#soberoctober day 23: charting f1 (barely)">
     <span class="nav-chevron">Previous</span>
   </a>
 
-
-  <a href="http://therealplato.com/posts/soberoctober24/" class="newer-link scrim" title="#soberoctober day 24">
-     <span class="nav-chevron">Next</span>
-  </a>
 
 
 
@@ -56,12 +52,12 @@
             <article class="post">
                 <header>
                     <h1>
-                        #soberoctober day 23: charting f1 (barely)
+                        #soberoctober day 24
                     </h1>
                     <h2 class="headline">
-                    Oct 23, 2017 12:19
-                    · 215 words
-                    · 2 minutes read
+                    Oct 24, 2017 21:41
+                    · 104 words
+                    · 1 minute read
                       <span class="tags">
                       
                       </span>
@@ -69,18 +65,24 @@
                 </header>
                 
                 <section id="post-body">
-                    <p>Continuing from <a href="/posts/soberoctober22">yesterday</a>, I&rsquo;ve got a new hypothesis. The lap times of individual drivers will follow a sawtooth pattern throughout the race, as tires wear out and pitstops replace them with faster fresh tires. Additionally, refueling was allowed in past years. I think that the deviation between slow and fast laps will be lower in the refueling races than in post-refueling races. (Because the modern cars have to carry the whole race&rsquo;s worth of fuel from the start, they will show a more significant difference between early slow laps and late fast laps, than the refueling cars.)
-<hr>
-OK scratch that lol, I hoped to gain some D3 skills but instead I learned how to wrangle data. It might be a good idea to lower my expectations.</p>
+                    <script src="https://d3js.org/d3.v4.js"></script>
+<script src="/js/soberoctober24.js"></script>
 
-<p>I spent many more hours of trial and error to combine multiple pages from the Ergast API, then extract individual lap timing data objects, and then an unholy amount of googling until I found jq&rsquo;s <code>--slurp</code> option to input objects and output an array wrapping them. The result was <a href="https://github.com/therealplato/therealplato.com/tree/master/suzuka/laps">three shell scripts and one go script</a>.</p>
+<p>I was gonna make a sweet-ass graph that put yesterday&rsquo;s to shame but then I watched some youtube and now it&rsquo;s 21:45. I&rsquo;ll give it a go anyway!</p>
 
-<p>Once I had data, learning elementary <a href="https://github.com/therealplato/therealplato.com/blob/bcc0bc3e4d692a75c26eacdc4a9f15752487818e/hugosite/static/js/soberoctober23.js">d3 code</a> was a breeze, clocking in at only 40 minutes or so. Yes, I know it&rsquo;s <a href="/images/dwi.gif">ugly</a>.</p>
+<pre><code># get timing data for one driver's race:
+suzuka/laps Ω cat 2001.laps.json |\
+jq '.[] .Timings[] |select(.driverId == &quot;alonso&quot;) .time' |\
+jq -s '.' &gt; ../../hugosite/static/misc/2001.alonso.laps.json
+</code></pre>
 
-<p>Historic Formula 1 Suzuka Grand Prix lap time records:
 <div id="laptimes-container"></div>
-<script src="https://d3js.org/d3.v4.js"></script>
-<script src="/js/soberoctober23.js"></script></p>
+
+<p><em>@23:27</em> - Meh. I&rsquo;ll take it. I learned how to deal with margins, how to draw and position axes, how to zero pad numbers.</p>
+
+<p><a href="https://github.com/therealplato/therealplato.com/blob/e171f05a3b7a05351e4c33a474290bd12df0b5fa/hugosite/static/js/soberoctober24.js">chart source</a></p>
+
+<p>Next time: plotting a second time series on the same chart; show details of the data points on hover; make x-axis start at 1.</p>
 
                 </section>
             </article>
