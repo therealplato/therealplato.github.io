@@ -6,10 +6,20 @@
     <description>Recent content on therealplato.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Oct 2017 21:41:48 +1300</lastBuildDate>
+    <lastBuildDate>Wed, 25 Oct 2017 23:57:22 +1300</lastBuildDate>
     
 	<atom:link href="http://therealplato.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>#soberoctober day 25: Scythe</title>
+      <link>http://therealplato.com/posts/soberoctober25/</link>
+      <pubDate>Wed, 25 Oct 2017 23:57:22 +1300</pubDate>
+      
+      <guid>http://therealplato.com/posts/soberoctober25/</guid>
+      <description>I spent half an hour trying to make that a nice full-width header banner image. I dreamed of sexy scroll effects where this article text gently faded over the image, or the image smoothly shrinking from page width to content width. Not happening, noway nohow, not with this Hugo template and my current CSS knowledge.
+Scythe is a board game about claiming territory, resources, prestige and achievements. It&amp;rsquo;s playable by up to 5 players, including 1 with a solo ruleset or 6-7 with an expansion pack.</description>
+    </item>
     
     <item>
       <title>#soberoctober day 24</title>
