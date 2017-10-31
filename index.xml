@@ -6,10 +6,21 @@
     <description>Recent content on therealplato.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Oct 2017 23:26:41 +1300</lastBuildDate>
+    <lastBuildDate>Tue, 31 Oct 2017 22:21:28 +1300</lastBuildDate>
     
 	<atom:link href="http://therealplato.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>#soberoctober day 31: better timez</title>
+      <link>http://therealplato.com/posts/soberoctober31/</link>
+      <pubDate>Tue, 31 Oct 2017 22:21:28 +1300</pubDate>
+      
+      <guid>http://therealplato.com/posts/soberoctober31/</guid>
+      <description>I&amp;rsquo;ve updated timez to support user defined timezone aliases.
+This might be helpful if you have family or colleagues in different timezones:
+ ~ Ω timez mom bro gran auckland mom: 2017-10-31 05:25:02 bro: 2017-10-31 05:25:02 gran: 2017-10-31 03:25:02 auckland: 2017-10-31 22:25:02 ~ Ω timez la london de auckland la: 2017-10-31 02:26:27 london: 2017-10-31 09:26:27 de: 2017-10-31 10:26:27 auckland: 2017-10-31 22:26:27  With #soberoctober ending I look forward to once again sucking at Rocket League and various other games.</description>
+    </item>
     
     <item>
       <title>#soberoctober day 30: the slackening</title>
