@@ -73,13 +73,13 @@
 create.</p>
 
 <p>It was really straightforward:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">go get -u -d github.com/ipfs/go-ipfs
-cd $GOPATH/src/github.com/ipfs/go-ipfs
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">go get -u -d github.com/ipfs/go-ipfs
+<span style="color:#fff;font-weight:bold">cd</span> $GOPATH/src/github.com/ipfs/go-ipfs
 make install
 ipfs init
-ipfs daemon <span style="color:#75715e">#in other term</span>
+ipfs daemon <span style="color:#007f7f">#in other term</span>
 ipfs add ~/Downloads/realityexploitroundtable-EP001.ogg
-<span style="color:#75715e"># added QmdPt2EqonqKcwyxbuePuiwPsEc8c3t5R3Dr4oTDBpUmXM realityexploitroundtable-EP001.ogg</span></code></pre></div>
+<span style="color:#007f7f"># added QmdPt2EqonqKcwyxbuePuiwPsEc8c3t5R3Dr4oTDBpUmXM realityexploitroundtable-EP001.ogg</span></code></pre></div>
 <p>Tada! That&rsquo;s that, my file is now in a global p2p filesystem. Actually, &ldquo;global&rdquo; is a misnomer - it&rsquo;s named &ldquo;interplanetary&rdquo; because the
 project aims to be usable for syncing content between Earth and Mars and beyond, and is designed to work within bandwidth and latency
 constraints.</p>
@@ -90,7 +90,7 @@ discuss privacy pre-Snowden. ~40 minutes
 <br><a href="https://ipfs.infura.io/ipfs/QmdPt2EqonqKcwyxbuePuiwPsEc8c3t5R3Dr4oTDBpUmXMk">https://ipfs.infura.io/ipfs/QmdPt2EqonqKcwyxbuePuiwPsEc8c3t5R3Dr4oTDBpUmXMk</a></p>
 
 <p>If you have IPFS installed yourself, you can retrieve the podcast with:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ipfs get QmdPt2EqonqKcwyxbuePuiwPsEc8c3t5R3Dr4oTDBpUmXM -o<span style="color:#f92672">=</span>realityexploitroundtable-EP001.ogg</code></pre></div>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ipfs get QmdPt2EqonqKcwyxbuePuiwPsEc8c3t5R3Dr4oTDBpUmXM -o=realityexploitroundtable-EP001.ogg</code></pre></div>
 <p>I gotta give a shoutout to the IPFS contributors for their ascii art logo. It looks outstanding in cool-retro-term:
 <image src="/images/crt-ipfs.png"/></p>
 
