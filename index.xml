@@ -18,7 +18,7 @@
       
       <guid>https://therealplato.com/posts/breakingprod/</guid>
       <description>A hasty generalizer might categorize software into two buckets: &amp;ldquo;Works&amp;rdquo;, and &amp;ldquo;Doesn&amp;rsquo;t Work&amp;rdquo;. They&amp;rsquo;ve missed an exciting middle ground: &amp;ldquo;Works until it doesn&amp;rsquo;t.&amp;rdquo;
-package main func main(){} func (i code) am() string { return &amp;quot;kind of a big deal&amp;quot; } // prog.go:4:9: undefined: code  Risk The code above doesn&amp;rsquo;t compile and thus doesn&amp;rsquo;t run. &amp;ldquo;Deploying code&amp;rdquo; includes &amp;ldquo;making it run&amp;rdquo;, so we cannot successfully deploy this code. This is my favorite kind of failure - one that&amp;rsquo;s impossible to miss.</description>
+package main func main(){} func (i code) am() string { return &amp;#34;kind of a big deal&amp;#34; } // prog.go:4:9: undefined: code Risk The code above doesn&amp;rsquo;t compile and thus doesn&amp;rsquo;t run. &amp;ldquo;Deploying code&amp;rdquo; includes &amp;ldquo;making it run&amp;rdquo;, so we cannot successfully deploy this code. This is my favorite kind of failure - one that&amp;rsquo;s impossible to miss.</description>
     </item>
     
     <item>
@@ -287,7 +287,7 @@ Inkscape  Learned to trace a rastered image into svg by placing and modifying be
       <guid>https://therealplato.com/posts/soberoctober08/</guid>
       <description>This evening I set up the Interplanetary File System and uploaded the first episode of Reality Exploit Roundtable, a 2012 podcast I helped create.
 It was really straightforward:
-go get -u -d github.com/ipfs/go-ipfs cd $GOPATH/src/github.com/ipfs/go-ipfs make install ipfs init ipfs daemon #in other term ipfs add ~/Downloads/realityexploitroundtable-EP001.ogg # added QmdPt2EqonqKcwyxbuePuiwPsEc8c3t5R3Dr4oTDBpUmXM realityexploitroundtable-EP001.ogg  Tada! That&amp;rsquo;s that, my file is now in a global p2p filesystem. Actually, &amp;ldquo;global&amp;rdquo; is a misnomer - it&amp;rsquo;s named &amp;ldquo;interplanetary&amp;rdquo; because the project aims to be usable for syncing content between Earth and Mars and beyond, and is designed to work within bandwidth and latency constraints.</description>
+go get -u -d github.com/ipfs/go-ipfs cd $GOPATH/src/github.com/ipfs/go-ipfs make install ipfs init ipfs daemon #in other term ipfs add ~/Downloads/realityexploitroundtable-EP001.ogg # added QmdPt2EqonqKcwyxbuePuiwPsEc8c3t5R3Dr4oTDBpUmXM realityexploitroundtable-EP001.ogg Tada! That&amp;rsquo;s that, my file is now in a global p2p filesystem. Actually, &amp;ldquo;global&amp;rdquo; is a misnomer - it&amp;rsquo;s named &amp;ldquo;interplanetary&amp;rdquo; because the project aims to be usable for syncing content between Earth and Mars and beyond, and is designed to work within bandwidth and latency constraints.</description>
     </item>
     
     <item>

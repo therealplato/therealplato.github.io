@@ -10,7 +10,6 @@
 		<title>#soberoctober day 5:  JIT &middot; therealplato.com</title>
 		<link rel="shortcut icon" href="https://therealplato.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://therealplato.com/css/style.css">
-		<link rel="stylesheet" href="https://therealplato.com/css/highlight.css">
 		
 
 		
@@ -96,14 +95,11 @@ reads and/or updates dynamodb:</p>
 <h2 id="arch-of-the-day">Arch Of The Day</h2>
 
 <p>While trying to use two finger scrolling, I observed this entertaining behavior:</p>
-
-<pre><code class="language-gherkin">Given my cursor is on a link
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gherkin" data-lang="gherkin">Given my cursor is on a link
 When I touch one finger
 And then a second finger
 And then drag up or down
-Then each scroll event opens a new tab
-</code></pre>
-
+Then each scroll event opens a new tab</code></pre></div>
 <p>This behavior can easily open 50 copies of the link under the cursor.</p>
 
 <p>It appears resolved after disabling some <code>middlemouse.*</code> settings in firefox&rsquo;s <code>about:config</code>.</p>
@@ -150,8 +146,6 @@ Then each scroll event opens a new tab
 
         <script src="https://therealplato.com/js/jquery-2.2.4.min.js"></script>
 <script src="https://therealplato.com/js/main.js"></script>
-<script src="https://therealplato.com/js/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 
 
 
