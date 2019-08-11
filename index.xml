@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>therealplato.com</title>
-    <link>http://therealplato.com/</link>
+    <link>https://therealplato.com/</link>
     <description>Recent content on therealplato.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 29 Nov 2017 01:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://therealplato.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://therealplato.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>6 years of bitcoin youtube comments</title>
-      <link>http://therealplato.com/posts/gascomments/</link>
+      <link>https://therealplato.com/posts/gascomments/</link>
       <pubDate>Wed, 29 Nov 2017 01:00:00 +0000</pubDate>
       
-      <guid>http://therealplato.com/posts/gascomments/</guid>
+      <guid>https://therealplato.com/posts/gascomments/</guid>
       <description>Presented for your amusement and/or chagrin, six years of comments on a Bitcoin video.
 img.comment {display: block; margin-left: calc(~&#34;-50vw + 50%&#34;); margin-right: calc(~&#34;-50vw + 50%&#34;); }  </description>
     </item>
     
     <item>
       <title>#soberoctober day 31: better timez</title>
-      <link>http://therealplato.com/posts/soberoctober31/</link>
+      <link>https://therealplato.com/posts/soberoctober31/</link>
       <pubDate>Tue, 31 Oct 2017 22:21:28 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober31/</guid>
+      <guid>https://therealplato.com/posts/soberoctober31/</guid>
       <description>I&amp;rsquo;ve updated timez to support user defined timezone aliases.
 This might be helpful if you have family or colleagues in different timezones:
  ~ Ω timez mom bro gran auckland mom: 2017-10-31 05:25:02 bro: 2017-10-31 05:25:02 gran: 2017-10-31 03:25:02 auckland: 2017-10-31 22:25:02 ~ Ω timez la london de auckland la: 2017-10-31 02:26:27 london: 2017-10-31 09:26:27 de: 2017-10-31 10:26:27 auckland: 2017-10-31 22:26:27  With #soberoctober ending I look forward to once again sucking at Rocket League and various other games.</description>
@@ -34,19 +34,19 @@ This might be helpful if you have family or colleagues in different timezones:
     
     <item>
       <title>#soberoctober day 30: the slackening</title>
-      <link>http://therealplato.com/posts/soberoctober30/</link>
+      <link>https://therealplato.com/posts/soberoctober30/</link>
       <pubDate>Mon, 30 Oct 2017 23:26:41 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober30/</guid>
+      <guid>https://therealplato.com/posts/soberoctober30/</guid>
       <description> Watched F1 Mexico GP. Learned about &amp;ldquo;MTG Cube&amp;rdquo; format. Read ~10% of DODO. Worked on timez, starting to add user-defined timezone aliases.  </description>
     </item>
     
     <item>
       <title>#soberoctober day 29: fluff</title>
-      <link>http://therealplato.com/posts/soberoctober29/</link>
+      <link>https://therealplato.com/posts/soberoctober29/</link>
       <pubDate>Sun, 29 Oct 2017 22:47:58 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober29/</guid>
+      <guid>https://therealplato.com/posts/soberoctober29/</guid>
       <description>Nothing of note to report today&amp;hellip; granted, plenty of previous posts have reported nothing of note in detail.
 Did some housekeeping activities in preparation for upcoming travel and started reading The Rise And Fall Of DODO.
 I admit to counting down the 2 remaining days of #soberoctober.
@@ -56,19 +56,19 @@ I&amp;rsquo;m up to 100 daily kettlebell swings.</description>
     
     <item>
       <title>#soberoctober day 28: smash up</title>
-      <link>http://therealplato.com/posts/soberoctober28/</link>
+      <link>https://therealplato.com/posts/soberoctober28/</link>
       <pubDate>Sat, 28 Oct 2017 23:54:40 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober28/</guid>
+      <guid>https://therealplato.com/posts/soberoctober28/</guid>
       <description>Another day of tabletop gaming, this time a send off to a departing collegue. We went to the office, blasted some music, and played Smash Up. It&amp;rsquo;s a card game where each player gets two decks, smashes them (i.e. shuffles them together) and takes turns playing cards from hand onto &amp;ldquo;base&amp;rdquo; cards on the table. Once there are enough minions on a base, the players with the strongest minions earn some victory points, the base and minions are discarded, and a new base is put into play.</description>
     </item>
     
     <item>
       <title>#soberoctober day 27: Guildhall</title>
-      <link>http://therealplato.com/posts/soberoctober27/</link>
+      <link>https://therealplato.com/posts/soberoctober27/</link>
       <pubDate>Fri, 27 Oct 2017 23:40:07 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober27/</guid>
+      <guid>https://therealplato.com/posts/soberoctober27/</guid>
       <description>Another lazy evening&amp;hellip;
 After work a colleague introduced me to a new game, Guildhall.
 Like many of my favorite games, it&amp;rsquo;s simple but deep. There&amp;rsquo;s one large shared deck, containing 30 types of cards - five colors and six guilds. Our deck was from the Job Faire expansion, containing Hunter, Peddler, Stonemason, Robber, Scholar, and Tax Collector guilds.
@@ -77,10 +77,10 @@ The basic objective is to play cards from your hand into your six guilds, trying
     
     <item>
       <title>#soberoctober day 26: playmat plans</title>
-      <link>http://therealplato.com/posts/soberoctober26/</link>
+      <link>https://therealplato.com/posts/soberoctober26/</link>
       <pubDate>Thu, 26 Oct 2017 23:36:49 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober26/</guid>
+      <guid>https://therealplato.com/posts/soberoctober26/</guid>
       <description>I mentioned Inked Gaming in #soberoctober25 and their custom playmat service.
 I&amp;rsquo;ve come up with an design for my own playmat. Or at least, the plan for a design; if my past forays into digital art are any indication, there will be a lot of sweat and tears before I&amp;rsquo;ve got a finished file that I&amp;rsquo;m happy with.
 The plan:
@@ -89,39 +89,39 @@ The plan:
     
     <item>
       <title>#soberoctober day 25: Scythe</title>
-      <link>http://therealplato.com/posts/soberoctober25/</link>
+      <link>https://therealplato.com/posts/soberoctober25/</link>
       <pubDate>Wed, 25 Oct 2017 23:57:22 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober25/</guid>
+      <guid>https://therealplato.com/posts/soberoctober25/</guid>
       <description>I spent half an hour trying to make that a nice full-width header banner image. I dreamed of sexy scroll effects where this article text gently faded over the image, or the image smoothly shrinking from page width to content width. Not happening, noway nohow, not with this Hugo template and my current CSS knowledge.
 Scythe is a board game about claiming territory, resources, prestige and achievements. It&amp;rsquo;s playable by up to 5 players, including 1 with a solo ruleset or 6-7 with an expansion pack.</description>
     </item>
     
     <item>
       <title>#soberoctober day 24: another mediocre chart</title>
-      <link>http://therealplato.com/posts/soberoctober24/</link>
+      <link>https://therealplato.com/posts/soberoctober24/</link>
       <pubDate>Tue, 24 Oct 2017 21:41:48 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober24/</guid>
+      <guid>https://therealplato.com/posts/soberoctober24/</guid>
       <description>I was gonna make a sweet-ass graph that put yesterday&amp;rsquo;s to shame but then I watched some youtube and now it&amp;rsquo;s 21:45. I&amp;rsquo;ll give it a go anyway!
 # get timing data for one driver&#39;s race: suzuka/laps Ω cat 2001.laps.json |\ jq &#39;.[] .Timings[] |select(.driverId == &amp;quot;alonso&amp;quot;) .time&#39; |\ jq -s &#39;.&#39; &amp;gt; ../../hugosite/static/misc/2001.alonso.laps.json   @23:27 - Meh. I&amp;rsquo;ll take it. I learned how to deal with margins, how to draw and position axes, how to zero pad numbers.</description>
     </item>
     
     <item>
       <title>#soberoctober day 23: charting f1 (barely)</title>
-      <link>http://therealplato.com/posts/soberoctober23/</link>
+      <link>https://therealplato.com/posts/soberoctober23/</link>
       <pubDate>Mon, 23 Oct 2017 12:19:02 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober23/</guid>
+      <guid>https://therealplato.com/posts/soberoctober23/</guid>
       <description>Continuing from yesterday, I&amp;rsquo;ve got a new hypothesis. The lap times of individual drivers will follow a sawtooth pattern throughout the race, as tires wear out and pitstops replace them with faster fresh tires. Additionally, refueling was allowed in past years. I think that the deviation between slow and fast laps will be lower in the refueling races than in post-refueling races. (Because the modern cars have to carry the whole race&amp;rsquo;s worth of fuel from the start, they will show a more significant difference between early slow laps and late fast laps, than the refueling cars.</description>
     </item>
     
     <item>
       <title>#soberoctober day 22: preparing to chart F1 data</title>
-      <link>http://therealplato.com/posts/soberoctober22/</link>
+      <link>https://therealplato.com/posts/soberoctober22/</link>
       <pubDate>Sun, 22 Oct 2017 22:25:25 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober22/</guid>
+      <guid>https://therealplato.com/posts/soberoctober22/</guid>
       <description>I&amp;rsquo;d like to know the answer to &amp;ldquo;How did lap times evolve throughout the years of the F1 Suzuka Grand Prix?&amp;rdquo;
 I found an excellent data source: the ergast.com API. The &amp;ldquo;lap times&amp;rdquo; docs indicate that this dataset is available for races since 1996. First I&amp;rsquo;ll look up the index of the Suzuka GP for each year, since sometimes circuits get added or dropped:
 #!/bin/bash # find Suzuka race number: years=(1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017) for y in ${years[@]}; do # respect the API by not redownloading and rate limiting: if [ !</description>
@@ -129,20 +129,20 @@ I found an excellent data source: the ergast.com API. The &amp;ldquo;lap times&a
     
     <item>
       <title>#soberoctober day 21: combinatorics beat me</title>
-      <link>http://therealplato.com/posts/soberoctober21/</link>
+      <link>https://therealplato.com/posts/soberoctober21/</link>
       <pubDate>Sat, 21 Oct 2017 23:50:52 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober21/</guid>
+      <guid>https://therealplato.com/posts/soberoctober21/</guid>
       <description>fun: I&amp;rsquo;m still having a real blast playing Magic downtown at King Of Cards. I won about $6 worth of cards after entering a free &amp;ldquo;Standard Showdown&amp;rdquo; tournament with a borrowed deck. Neat.
 After the shop closed, I spent a good hour looking at all the custom playmats available at Inked Gaming. There&amp;rsquo;s a bunch of nice ones but I want to design one that has the Golang gopher on it.</description>
     </item>
     
     <item>
       <title>#soberoctober day 20: crypto wip</title>
-      <link>http://therealplato.com/posts/soberoctober20/</link>
+      <link>https://therealplato.com/posts/soberoctober20/</link>
       <pubDate>Fri, 20 Oct 2017 21:55:56 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober20/</guid>
+      <guid>https://therealplato.com/posts/soberoctober20/</guid>
       <description>Began implementing CryptoIdentity and ECDSAIdentity.
 Small steps towards the goal of proving authorship of content.
 It&amp;rsquo;s not done or tested, so not worth elaborating on yet. ¯\(ツ)/¯</description>
@@ -150,10 +150,10 @@ It&amp;rsquo;s not done or tested, so not worth elaborating on yet. ¯\(ツ)/¯<
     
     <item>
       <title>#soberoctober day 19: blag filler</title>
-      <link>http://therealplato.com/posts/soberoctober19/</link>
+      <link>https://therealplato.com/posts/soberoctober19/</link>
       <pubDate>Thu, 19 Oct 2017 22:40:00 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober19/</guid>
+      <guid>https://therealplato.com/posts/soberoctober19/</guid>
       <description>Nothing impressive to report after a long workday followed by a long nap.
 I caved and bought some rice krispy treat flavored ecig juice with 0% nicotine.
 Over the upcoming long weekend I plan to continue work on my subverse.Identity code. I&amp;rsquo;d like to implement grouping a set of identities as children of a parent identity, defining your own alias identities that point to other people, and implement &amp;ldquo;trust tiers&amp;rdquo; (trust spheres?</description>
@@ -161,10 +161,10 @@ Over the upcoming long weekend I plan to continue work on my subverse.Identity c
     
     <item>
       <title>#soberoctober day 18: coding rules</title>
-      <link>http://therealplato.com/posts/soberoctober18/</link>
+      <link>https://therealplato.com/posts/soberoctober18/</link>
       <pubDate>Wed, 18 Oct 2017 20:37:25 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober18/</guid>
+      <guid>https://therealplato.com/posts/soberoctober18/</guid>
       <description>Tonight I&amp;rsquo;ve begun formalizing my definition from day 15, continuing to work towards the goal of programmatic rules.
  N.B: In this post I use the word &amp;ldquo;behavior&amp;rdquo; to apply to both code (where it means: business logic, described by a function signature, implemented by code) and also to humans (where it means: things humans do.) Sorry for any confusion.
  A key behavior of a rule is does it apply in this scenario?</description>
@@ -172,30 +172,30 @@ Over the upcoming long weekend I plan to continue work on my subverse.Identity c
     
     <item>
       <title>#soberoctober day 17: i dont even blender</title>
-      <link>http://therealplato.com/posts/soberoctober17/</link>
+      <link>https://therealplato.com/posts/soberoctober17/</link>
       <pubDate>Tue, 17 Oct 2017 23:13:27 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober17/</guid>
+      <guid>https://therealplato.com/posts/soberoctober17/</guid>
       <description>Today&amp;rsquo;s a bust, the only thing I can call an accomplishment (outside work) was winning a game of Dominion.
 I&amp;rsquo;m still struggling to make my Blender model a manifold mesh. This time the EZ button (&amp;ldquo;Make Manifold&amp;rdquo; in 3D printing plugin) just covers up my debossed text with a face. My options appear to be swear at my computer, watch hours of tutorials or get enough sleep tonight. I choose the latter.</description>
     </item>
     
     <item>
       <title>#soberoctober day 16: now with previous/next links!</title>
-      <link>http://therealplato.com/posts/soberoctober16/</link>
+      <link>https://therealplato.com/posts/soberoctober16/</link>
       <pubDate>Mon, 16 Oct 2017 22:56:18 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober16/</guid>
+      <guid>https://therealplato.com/posts/soberoctober16/</guid>
       <description>Today my colleague delivered the 3D print of my day 9 STL file. We printed it at approximately 20mm*20mm*4mm to verify that I got everything right. Other than orienting Y-axis up instead of correct Z-axis up, the scale and mesh were fine and produced a print with excellent fine detail. Now I&amp;rsquo;m working on the full scale project, which will be a sign for the company dishwasher.
 I&amp;rsquo;m getting stronger with my kettlebell.</description>
     </item>
     
     <item>
       <title>#soberoctober day 15: what is a rule, anyway</title>
-      <link>http://therealplato.com/posts/soberoctober15/</link>
+      <link>https://therealplato.com/posts/soberoctober15/</link>
       <pubDate>Sun, 15 Oct 2017 21:27:29 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober15/</guid>
+      <guid>https://therealplato.com/posts/soberoctober15/</guid>
       <description>I&amp;rsquo;ve been thinking about rulescapes for a long time.
 Let&amp;rsquo;s say I want to do something illicit, like sell a beverage without the appropriate license. Using facebook for transactions or advertising puts me at risk - facebook can be legally compelled to turn my data over to authorities, or authorities can simply join public facebook groups and entrap their users.
 When I did use facebook, group membership was not very granular.</description>
@@ -203,20 +203,20 @@ When I did use facebook, group membership was not very granular.</description>
     
     <item>
       <title>#soberoctober day 14: magic: the addicting</title>
-      <link>http://therealplato.com/posts/soberoctober14/</link>
+      <link>https://therealplato.com/posts/soberoctober14/</link>
       <pubDate>Sat, 14 Oct 2017 22:41:19 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober14/</guid>
+      <guid>https://therealplato.com/posts/soberoctober14/</guid>
       <description>The markdown source file of this post includes the header draft: false which describes my experience today. Bad news: the Ixalan draft was cancelled due to lack of interest; three people signed up but we needed 6-8. Good news: we instead played a limited format that I&amp;rsquo;d never heard of, &amp;ldquo;Ixalan League&amp;rdquo;.
 We each paid $20 to enter and received three booster packs, a cardboard box and some paperwork. I opened my boosters, took all the red and white cards, 7 plains, 8 mountains and called it a deck.</description>
     </item>
     
     <item>
       <title>#soberoctober day 13: do you believe in  magic: the gathering</title>
-      <link>http://therealplato.com/posts/soberoctober13/</link>
+      <link>https://therealplato.com/posts/soberoctober13/</link>
       <pubDate>Fri, 13 Oct 2017 21:07:50 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober13/</guid>
+      <guid>https://therealplato.com/posts/soberoctober13/</guid>
       <description>Shortly before #soberoctober began, Wizards of the Coast announced their upcoming digital game &amp;ldquo;Magic: The Gathering Arena.&amp;rdquo;
 I have fond childhood memories of playing Magic with my brother. Our first experience was with &amp;ldquo;Portal&amp;rdquo;, a starter set that came with enough cards for both of us to experiment with deckbuilding and learn the rules. After that we played throughout Odyssey, Onslaught and Mirrodin blocks, or approximately 2000-2006.
 Then I got a computer with a graphics card, went to college, and video games effectively replaced Magic for me.</description>
@@ -224,10 +224,10 @@ Then I got a computer with a graphics card, went to college, and video games eff
     
     <item>
       <title>#soberoctober day 12: finishing timez</title>
-      <link>http://therealplato.com/posts/soberoctober12/</link>
+      <link>https://therealplato.com/posts/soberoctober12/</link>
       <pubDate>Thu, 12 Oct 2017 23:18:07 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober12/</guid>
+      <guid>https://therealplato.com/posts/soberoctober12/</guid>
       <description>Nothing special to report, I spent the evening improving yesterday&amp;rsquo;s timez project.
 I split up my complicated parse() function, added many testcases, added some new aliases and formatting strings, loaded local timezones from ~/.timezrc or date binary, and added docs.
 I was tickled to see it work across DST boundaries:
@@ -236,10 +236,10 @@ content/posts Ω timez UTC at 2017-09-24 02:59:00 Pacific/Auckland UTC: 2017-09
     
     <item>
       <title>#soberoctober day 11: CLI timezone conversion</title>
-      <link>http://therealplato.com/posts/soberoctober11/</link>
+      <link>https://therealplato.com/posts/soberoctober11/</link>
       <pubDate>Wed, 11 Oct 2017 22:12:35 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober11/</guid>
+      <guid>https://therealplato.com/posts/soberoctober11/</guid>
       <description>Movio has offices in US, UK, DE, NZ and has clients globally. I frequently find myself asking &amp;ldquo;Is it office hours in the US? Is it the middle of the night in Asia?&amp;rdquo; We keep records with UTC timestamps (as all programmers should!) but it&amp;rsquo;s still difficult to conceptualize and mentally convert timezones.
 In the past, I&amp;rsquo;ve used several helpful tools:
  The excellent timeanddate.com converter gives you multiple zones and the ability to type or drag to set any zone to any time.</description>
@@ -247,10 +247,10 @@ In the past, I&amp;rsquo;ve used several helpful tools:
     
     <item>
       <title>#soberoctober day 10: svg ftw (edit: not yet)</title>
-      <link>http://therealplato.com/posts/soberoctober10/</link>
+      <link>https://therealplato.com/posts/soberoctober10/</link>
       <pubDate>Tue, 10 Oct 2017 21:27:08 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober10/</guid>
+      <guid>https://therealplato.com/posts/soberoctober10/</guid>
       <description>Long day today, leaving me with no time to dive deep into SVG Animations by Sarah Drasner (O&amp;rsquo;Reilly). Copyright 2017 Sarah Drasner, 978-1-491-93970-3.
 Let&amp;rsquo;s see what I can get done with an hour and some lipsum&amp;hellip;
  &amp;hellip; Not very far. My objective was to make an arrow that starts pointing down and animates to point up as you scroll down the page.
@@ -259,10 +259,10 @@ After conceding that was not a newbie task, I just looped the animation.</descri
     
     <item>
       <title>#soberoctober day 9: blender looks easy amirite</title>
-      <link>http://therealplato.com/posts/soberoctober09/</link>
+      <link>https://therealplato.com/posts/soberoctober09/</link>
       <pubDate>Mon, 09 Oct 2017 21:42:44 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober09/</guid>
+      <guid>https://therealplato.com/posts/soberoctober09/</guid>
       <description>Today&amp;rsquo;s project: Make a 3D Printable STL file!
 I don&amp;rsquo;t have a 3D printer but a colleague just got one and has kindly offered to collaborate if I give him an STL.
 I know that&amp;rsquo;s a filetype of 3D models but I&amp;rsquo;ve never made one. Time to figure it out.
@@ -271,10 +271,10 @@ Inkscape  Learned to trace a rastered image into svg by placing and modifying be
     
     <item>
       <title>#soberoctober day 8: interplanetary file system</title>
-      <link>http://therealplato.com/posts/soberoctober08/</link>
+      <link>https://therealplato.com/posts/soberoctober08/</link>
       <pubDate>Sun, 08 Oct 2017 21:17:55 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober08/</guid>
+      <guid>https://therealplato.com/posts/soberoctober08/</guid>
       <description>This evening I set up the Interplanetary File System and uploaded the first episode of Reality Exploit Roundtable, a 2012 podcast I helped create.
 It was really straightforward:
 go get -u -d github.com/ipfs/go-ipfs cd $GOPATH/src/github.com/ipfs/go-ipfs make install ipfs init ipfs daemon #in other term ipfs add ~/Downloads/realityexploitroundtable-EP001.ogg # added QmdPt2EqonqKcwyxbuePuiwPsEc8c3t5R3Dr4oTDBpUmXM realityexploitroundtable-EP001.ogg  Tada! That&amp;rsquo;s that, my file is now in a global p2p filesystem. Actually, &amp;ldquo;global&amp;rdquo; is a misnomer - it&amp;rsquo;s named &amp;ldquo;interplanetary&amp;rdquo; because the project aims to be usable for syncing content between Earth and Mars and beyond, and is designed to work within bandwidth and latency constraints.</description>
@@ -282,30 +282,30 @@ go get -u -d github.com/ipfs/go-ipfs cd $GOPATH/src/github.com/ipfs/go-ipfs make
     
     <item>
       <title>#soberoctober day 7: one of us</title>
-      <link>http://therealplato.com/posts/soberoctober07/</link>
+      <link>https://therealplato.com/posts/soberoctober07/</link>
       <pubDate>Sat, 07 Oct 2017 18:26:49 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober07/</guid>
+      <guid>https://therealplato.com/posts/soberoctober07/</guid>
       <description>Today&amp;rsquo;s societies are impersonal behemoths. Our governments attempt to apply identical rules to millions or billions of people with very different lives, and our media and education systems help by reinforcing expected patterns of behavior.
 I&amp;rsquo;ve deleted paragraphs from this post out of fear that society at large would punish me for sharing those bits of information. I&amp;rsquo;m not sure if those bits would result in legal consequences; if they would trigger individuals to dox, swat or DDOS me; or if no one would care.</description>
     </item>
     
     <item>
       <title>#soberoctober day 6: 剁椒鱼头BBQ</title>
-      <link>http://therealplato.com/posts/soberoctober06/</link>
+      <link>https://therealplato.com/posts/soberoctober06/</link>
       <pubDate>Fri, 06 Oct 2017 21:21:27 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober06/</guid>
+      <guid>https://therealplato.com/posts/soberoctober06/</guid>
       <description>One Friday per month, Movio has a barbecue, with responsibility rotating among squads. Today it was Red Squad&amp;rsquo;s turn and it was good.
 My squadmate Gary planned the menu and was chief grillmaster. Following his recipes, we made green bean stuffed chicken wings, fish head chili, fish fillets, omelettes, handmade noodles, and egg-free vegan noodles. Our product owner Vlad also made fried halloumi, sausages and regular chicken wings as backup dishes.</description>
     </item>
     
     <item>
       <title>#soberoctober day 5:  JIT</title>
-      <link>http://therealplato.com/posts/soberoctober05/</link>
+      <link>https://therealplato.com/posts/soberoctober05/</link>
       <pubDate>Thu, 05 Oct 2017 23:55:00 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober05/</guid>
+      <guid>https://therealplato.com/posts/soberoctober05/</guid>
       <description>document.addEventListener(&#34;DOMContentLoaded&#34;, function() { $.get(&#34;https://5b567rkzxe.execute-api.us-east-2.amazonaws.com/prod/com-therealplato-counter?TableName=com-therealplato-counter&#34;, function(data, status){ if(status != &#34;success&#34;) { return } $(&#34;#counter-button&#34;).text(data.m) }) $(&#34;#counter-button&#34;).click(function(){ $.post(&#34;https://5b567rkzxe.execute-api.us-east-2.amazonaws.com/prod/com-therealplato-counter?TableName=com-therealplato-counter&#34;, {}, function(data, status){ if(status != &#34;success&#34;) { return } $(&#34;#counter-button&#34;).text(data.m) }); }); })  I barely completed this by midnight! AWS is complicated. This button hits an AWS API Gateway, which proxies to a lambda function, which reads and/or updates dynamodb:
 Button has been clicked&amp;nbsp;&amp;hellip;&amp;nbsp;times
 Arch Of The Day While trying to use two finger scrolling, I observed this entertaining behavior:</description>
@@ -313,20 +313,20 @@ Arch Of The Day While trying to use two finger scrolling, I observed this entert
     
     <item>
       <title>#soberoctober day 4: a bit of serverless</title>
-      <link>http://therealplato.com/posts/soberoctober04/</link>
+      <link>https://therealplato.com/posts/soberoctober04/</link>
       <pubDate>Wed, 04 Oct 2017 19:34:11 +1300</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober04/</guid>
+      <guid>https://therealplato.com/posts/soberoctober04/</guid>
       <description>Today&amp;rsquo;s Achievements: I tried Amazon Lambda. I first heard of this &amp;ldquo;serverless&amp;rdquo; computing at Full Stack Fest 2016. You give Amazon a function and only pay for resources used as the function runs. I immediately observed that there are, in fact, still servers involved, you&amp;rsquo;re just delegating operations to Amazon.
 After I got over my pedantry and listened to this story I decided I liked the idea. Lambda can be orders of magnitudes cheaper than EC2 (for sporadic resource use,) or more expensive than EC2 (for pegged resource use.</description>
     </item>
     
     <item>
       <title>#soberoctober day 3: blog it</title>
-      <link>http://therealplato.com/posts/soberoctober03/</link>
+      <link>https://therealplato.com/posts/soberoctober03/</link>
       <pubDate>Tue, 03 Oct 2017 23:00:00 +0000</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober03/</guid>
+      <guid>https://therealplato.com/posts/soberoctober03/</guid>
       <description> Started the day off with 50 kettlebell swings, will keep it up till Monday, when I&amp;rsquo;ll increase to 100.
 A colleague has joined the #soberoctober challenge.
 Today&amp;rsquo;s achievements:  Learned how SPF works Deployed this blog to therealplato.github.io and therealplato.com Earned &amp;ldquo;Banker&amp;rdquo; and &amp;ldquo;Thermalist&amp;rdquo; awards in Terraforming Mars, didn&amp;rsquo;t win  </description>
@@ -334,20 +334,20 @@ Today&amp;rsquo;s achievements:  Learned how SPF works Deployed this blog to the
     
     <item>
       <title>#soberoctober day 2: out with the mold</title>
-      <link>http://therealplato.com/posts/soberoctober02/</link>
+      <link>https://therealplato.com/posts/soberoctober02/</link>
       <pubDate>Mon, 02 Oct 2017 08:00:00 +0000</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober02/</guid>
+      <guid>https://therealplato.com/posts/soberoctober02/</guid>
       <description>Keep catching myself reaching for my e-cig, locked far away. Bought seven types of gum to try instead. &amp;ldquo;5 Watermelon&amp;rdquo; package indicates eating the whole pack results in a laxative effect, neat! Considered buying some nicotine-free ecig liquid but that feels like cheating&amp;hellip;
 Today&amp;rsquo;s Achievements  Doused my moldy bedframe in sodium hydroxide Found and threw out a moldy spare pillow Yoga: for the first time in Downward Dog I touched my heels to the ground Set up Hugo and compiled these first posts from markdown  Arch, worth its own section&amp;hellip;  Got my brightness function keys working thanks to jmesmon/illum Learned how to close windows with awesome (default super-shift-c) Learned how to throw windows around workspaces (super-shift-2), switch workspaces, (super-2), reflow workspace (super-space) Learned why firefox was covering up all my other windows - I hit super-T instead of ctrl-T, making awesome &amp;ldquo;keep on Top&amp;rdquo;  Arch wishlist:  Show bandwidth use, wifi state, battery level in system tray Make my clock update DST automatically.</description>
     </item>
     
     <item>
       <title>#soberoctober day 1: challenge accepted</title>
-      <link>http://therealplato.com/posts/soberoctober01/</link>
+      <link>https://therealplato.com/posts/soberoctober01/</link>
       <pubDate>Sun, 01 Oct 2017 08:00:00 +0000</pubDate>
       
-      <guid>http://therealplato.com/posts/soberoctober01/</guid>
+      <guid>https://therealplato.com/posts/soberoctober01/</guid>
       <description>Wut? Joe Rogan Experience #1007 introduced the Sober October challenge. I realized I couldn&amp;rsquo;t remember the last time I went a week without a beer. I&amp;rsquo;m certainly dependent on nicotine, I wonder if I am dependent on alcohol? Let&amp;rsquo;s find out.
 Goal: Produce something useful each day this month instead of getting drunk and sucking at rocket league.
 Rules: Caffiene is allowed.
