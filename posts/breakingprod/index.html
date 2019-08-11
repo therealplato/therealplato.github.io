@@ -56,7 +56,7 @@
                     </h1>
                     <h2 class="headline">
                     Aug 11, 2019 00:00
-                    · 1248 words
+                    · 1242 words
                     · 6 minutes read
                       <span class="tags">
                       
@@ -93,7 +93,7 @@ impact risk at a particular location.</p>
 server is less likely than me deploying problematic code. If my objective is to maximize uptime, bombproofing the data center is an option,
 but my time is probably better spent writing better code.</p>
 
-<p>An overeager or pressured engineer might state a guess as a quantified risk. An excellent <a href="/misc/therac-25.pdf">case study</a><sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup> of risk
+<p>An overeager or pressured engineer might state a guess as a quantified risk. An excellent <a href="/misc/therac-25.pdf">case study</a> (<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>) of risk
 management is the series of 6 massive radiation overdoses, 3 fatal, caused by software bugs in the Therac-25 radiation therapy machine.
 After the third incident, the manufacturer AECL implemented a hardware fix, and claimed that &ldquo;Analysis of the hazard rate resulting from
 these modifications indicates an improvement of at least five orders of magnitude.&rdquo;</p>
@@ -147,7 +147,7 @@ mathematical calculus is exact but risk is fuzzy. Let&rsquo;s give it a go:</p>
 </code></pre>
 
 <p>Benefits of failure include learning about an unknown failure mode, learning how to detect it, learning how to avoid it, identifying missing
-tests, and identifying previously unknown assumptions. The value of this learning experience often exceeds the costs of failure.<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup></p>
+tests, and identifying previously unknown assumptions. The value of this learning experience often exceeds the costs of failure. (<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>)</p>
 
 <p>It&rsquo;s up to the business to put numbers on the costs and benefits, or at least to assign relative weights. The engineers building and
 operating the system should be willing to explain their own risk calculus when it differs from the business&rsquo;s calculus. This notably
@@ -180,8 +180,7 @@ weighing them too low. Recalculate when new information becomes available.</p>
 <h5 id="minimize-risk">Minimize risk</h5>
 
 <p>Code defensively. Assume the worst and try to code around it:
-- Do not blindly assume that your code behaves as expected. Write validation or tests to confirm the behavior. Don&rsquo;t be afraid of checking assumptions repeatedly.
-- Do not assume that third party code behaves as expected.
+- Do not blindly assume that code, whether first party or third party, behaves as expected.  Write validation or tests to confirm the behavior. Don&rsquo;t be afraid of checking assumptions repeatedly.
 - Make services as independent as reasonably possible to minimize change risk. For instance, instead of having two services share a database
   table, give one service responsibility for maintaining that table and expose an API through which other services can use the table.
 - Gradually roll out changes that touch multiple services, rather than all at once.
@@ -192,19 +191,15 @@ weighing them too low. Recalculate when new information becomes available.</p>
 <p>The manufacturers of the Therac-25 code incorrectly calculated their risks. They were so confident in their software that they removed
 hardware interlocks used in the previous Therac-20 model. As it turned out, the same bugs were present in the Therac-20 as the Therac-25,
 but were not noticed because the interlocks prevented accidents. Do not mistake absence of evidence for evidence of absence.</p>
-
-<hr>
-
-<p>1: &ldquo;Medical Devices: The Therac-25&rdquo;. Nancy Leveson, University of Washington. Via <a href="https://github.com/danluu/post-mortems">danluu/post-mortems</a></p>
-
-<p>2: &ldquo;Move fast and break things.&rdquo; Mark Zuckerberg, <a href="https://www.sec.gov/Archives/edgar/data/1326801/000119312512034517/d287954ds1.htm#toc287954_10">Facebook IPO filing</a>, 2012</p>
 <div class="footnotes">
 
 <hr />
 
 <ol>
-<li id="fn:1"> <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
-<li id="fn:2"> <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+<li id="fn:1">&ldquo;Medical Devices: The Therac-25&rdquo;. Nancy Leveson, University of Washington. Via <a href="https://github.com/danluu/post-mortems">danluu/post-mortems</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2">&ldquo;Move fast and break things.&rdquo; Mark Zuckerberg, <a href="https://www.sec.gov/Archives/edgar/data/1326801/000119312512034517/d287954ds1.htm#toc287954_10">Facebook IPO filing</a>, 2012
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
 </ol>
 </div>
 
