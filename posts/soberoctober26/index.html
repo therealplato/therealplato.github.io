@@ -87,35 +87,35 @@ will be a lot of sweat and tears before I&rsquo;ve got a finished file that I&rs
 <li><p>Off to the side, place this code to reference parts of a turn:</p>
 
 <pre><code class="language-go">func turn() {
-beginning: {
-untap()
-upkeep()
-draw()
-}
-main1: {
-if !landThisTurn {
-  playLand()
-}
-castSpells()
-}
-combat: {
-begin()
-declareAttackers()
-declareBlockers()
-combatDamage()
-end()
-}
-main2: {
-if !landThisTurn {
-  playLand()
-}
-castSpells()
-}
+  beginning: {
+    untap()
+    upkeep()
+    draw()
+  }
+  main1: {
+    if !landThisTurn {
+      playLand()
+    }
+    castSpells()
+  }
+  combat: {
+    begin()
+    declareAttackers()
+    declareBlockers()
+    combatDamage()
+    end()
+  }
+  main2: {
+    if !landThisTurn {
+      playLand()
+    }
+    castSpells()
+  }
 
-end: {
-endStep()
-cleanupDmg()
-}
+  end: {
+    endStep()
+    cleanupDmg()
+  }
 }
 </code></pre></li>
 </ul>

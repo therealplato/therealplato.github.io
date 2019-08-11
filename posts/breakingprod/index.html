@@ -1,0 +1,263 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="@therealplato">
+		<meta name="description" content="words about things that i think about">
+		<meta name="generator" content="Hugo 0.57.0-DEV" />
+		<title>Breaking Production: Risk, Impact and Mitigations &middot; therealplato.com</title>
+		<link rel="shortcut icon" href="https://therealplato.com/images/favicon.ico">
+		<link rel="stylesheet" href="https://therealplato.com/css/style.css">
+		<link rel="stylesheet" href="https://therealplato.com/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://therealplato.com/css/font-awesome.min.css">
+		
+
+		
+		<link href="https://therealplato.com/index.xml" rel="alternate" type="application/rss+xml" title="therealplato.com" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a class="scrim" href='https://therealplato.com/'> <span class="arrow">←</span>Home</a>
+	
+	<a class="scrim" href='https://therealplato.com/posts'>Archive</a>
+
+	
+  <span class="nav-spacer"></span>
+
+
+
+  <a href="https://therealplato.com/posts/gascomments/" class="newer-link scrim" title="6 years of bitcoin youtube comments">
+     <span class="nav-chevron">Next</span>
+  </a>
+
+
+
+
+	
+  <a class="cta" href="https://therealplato.com/index.xml">RSS&nbsp;<i class="fa fa-rss" aria-hidden="true"></i></a>
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        Breaking Production: Risk, Impact and Mitigations
+                    </h1>
+                    <h2 class="headline">
+                    Aug 11, 2019 00:00
+                    · 1248 words
+                    · 6 minutes read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>A hasty generalizer might categorize software into two buckets: &ldquo;Works&rdquo;, and &ldquo;Doesn&rsquo;t Work&rdquo;. They&rsquo;ve missed an exciting middle ground:
+&ldquo;Works until it doesn&rsquo;t.&rdquo;</p>
+
+<pre><code class="language-go">    package main
+    func main(){}
+
+    func (i code) am() string {
+        return &quot;kind of a big deal&quot;
+    }
+
+    // prog.go:4:9: undefined: code
+</code></pre>
+
+<h4 id="risk">Risk</h4>
+
+<p>The code above doesn&rsquo;t compile and thus doesn&rsquo;t run. &ldquo;Deploying code&rdquo; includes &ldquo;making it run&rdquo;, so we cannot successfully deploy this code.
+This is my favorite kind of failure - one that&rsquo;s impossible to miss. We easily evaluate its failure risk as 100%.</p>
+
+<p>We got lucky there. Risk is often not possible to quantify. Is the risk of a meteor taking out the server 1% a day? Certainly not! 0.000001%
+a day? Probably still too high, but who knows? Searching &ldquo;meteor risk calculator&rdquo; finds global aggregates but no obvious way to assess
+impact risk at a particular location.</p>
+
+<p>Often the best we can do is evaluate relative risks - &ldquo;it might happen&rdquo; vs &ldquo;it probably will happen.&rdquo; On a given day, a meteor taking out the
+server is less likely than me deploying problematic code. If my objective is to maximize uptime, bombproofing the data center is an option,
+but my time is probably better spent writing better code.</p>
+
+<p>An overeager or pressured engineer might state a guess as a quantified risk. An excellent <a href="/misc/therac-25.pdf">case study</a><sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup> of risk
+management is the series of 6 massive radiation overdoses, 3 fatal, caused by software bugs in the Therac-25 radiation therapy machine.
+After the third incident, the manufacturer AECL implemented a hardware fix, and claimed that &ldquo;Analysis of the hazard rate resulting from
+these modifications indicates an improvement of at least five orders of magnitude.&rdquo;</p>
+
+<p>AECL didn&rsquo;t show their math, and it&rsquo;s hard to imagine how they reached this figure. It&rsquo;s safe to say that their evaluation included a faulty
+assumption that the software worked as intended.</p>
+
+<p>Risk assessment requires enumerating assumptions and considering the possibility that those assumptions are faulty. This is important
+because the risk model frequently changes when an assumption turns out to be wrong. AECL&rsquo;s assessment should have considered the fatal
+consequences of their incorrect assumption.</p>
+
+<p>Given that risk assessments involve unknowns, sometimes a guess is the best we can do. It&rsquo;s important to provide context that clearly
+communicates any assumptions and limitations of scope. AECL could have more precisely framed their statement by saying &ldquo;A risk analysis of
+the modifications shows five orders of magnitude lower risk of failure caused by incorrect readouts from the turntable position
+microswitches.&rdquo; The actual causes remained unidentified, AECL fixed the wrong thing, and patients continued to die.</p>
+
+<h4 id="impact">Impact</h4>
+
+<p>Evaluating <em>failure impact</em> is always specific to the business domain. When we say &ldquo;failure&rdquo;, do we mean &ldquo;the page doesn&rsquo;t load&rdquo;, &ldquo;we owe
+lots of money&rdquo; or &ldquo;we killed the patient?&rdquo; Some domains can tolerate failure more than others.</p>
+
+<p>We can also assess <em>change impact</em>: What is the set of things that this change could break? The trivial case is changing a process that runs
+in total isolation - only that process can fail. The ultimate case is a change across the board, perhaps rewriting the whole system in a new
+language or replacing an omnipresent storage system. These are high-impact changes because they touch everything; if something goes wrong,
+everything can fail. Most changes fall in between these extremes.</p>
+
+<p>Factors worth considering when assessing impact include:
+- Unethical system behavior, including physical harm
+- Person-hour costs
+- Monetary costs
+- Reputation costs</p>
+
+<p>As with evaluating risks, it&rsquo;s important to also consider how the impact would change if any assumptions are incorrect.</p>
+
+<h4 id="risk-calculus">Risk Calculus</h4>
+
+<p>I&rsquo;ve used the term <em>risk calculus</em> in conversations but never formally defined it to myself. Upon reflection it&rsquo;s a tongue-in-cheek term because
+mathematical calculus is exact but risk is fuzzy. Let&rsquo;s give it a go:</p>
+
+<pre><code>    Failure is defined as &quot;An Incorrect Behavior&quot;
+    Risk is defined as &quot;Probability of the Failure occurring&quot;
+    Impact is defined as &quot;Cost of the Failure&quot;
+
+    Do not use the system until:
+
+    The sum of (Risk * Impact) for all Failures
+      is less than
+    (The probability of no Failures * The benefit of no Failures)
+      plus
+    The sum of (the benefit of the Failure) for all Failures
+</code></pre>
+
+<p>Benefits of failure include learning about an unknown failure mode, learning how to detect it, learning how to avoid it, identifying missing
+tests, and identifying previously unknown assumptions. The value of this learning experience often exceeds the costs of failure.<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup></p>
+
+<p>It&rsquo;s up to the business to put numbers on the costs and benefits, or at least to assign relative weights. The engineers building and
+operating the system should be willing to explain their own risk calculus when it differs from the business&rsquo;s calculus. This notably
+includes scenarios where an engineer identifies an ethical impact that was overlooked or undervalued by the business.</p>
+
+<p>It&rsquo;s also worth reiterating that perfect information is almost never available. Weighing risks and impacts higher than reality is safer than
+weighing them too low. Recalculate when new information becomes available.</p>
+
+<h4 id="mitigations">Mitigations</h4>
+
+<p>Engineering is all about optimizing tradeoffs. In the context of risk mitigation, I&rsquo;ve seen several approaches:
+- Code nothing: We can&rsquo;t break anything.
+- Code poorly: We&rsquo;ll get a follow-on contract to fix our bugs.
+- Minimize impact: Write code that breaks gracefully.
+- Minimize risk: Write code that has very low chance of breaking.
+- Maximize benefit: Write code that is so valuable that users tolerate breakage.</p>
+
+<p>Personally, I also value the engineering team&rsquo;s happiness, so I prefer a combination of minimizing impact and minimizing risk.</p>
+
+<h5 id="minimize-impact">Minimize Impact</h5>
+
+<p>Build systems that handle known failure modes, but let the engineers handle unknown failure modes:
+- Build high-availability systems with multiple replicas to minimize impact when networking or hardware problems make a service unavailable.
+- Retry after transient failures (but not indefinitely.)
+- Retry if dependencies are unavailable at system startup (but not indefinitely.)
+- Do not take zero action when an error or exception is encountered.
+- Prefer terminating the process over continuing with an inconsistent or unknown program state.
+- Use instrumentation and alerting to quickly identify failures.</p>
+
+<h5 id="minimize-risk">Minimize risk</h5>
+
+<p>Code defensively. Assume the worst and try to code around it:
+- Do not blindly assume that your code behaves as expected. Write validation or tests to confirm the behavior. Don&rsquo;t be afraid of checking assumptions repeatedly.
+- Do not assume that third party code behaves as expected.
+- Make services as independent as reasonably possible to minimize change risk. For instance, instead of having two services share a database
+  table, give one service responsibility for maintaining that table and expose an API through which other services can use the table.
+- Gradually roll out changes that touch multiple services, rather than all at once.
+- Have a comprehensive test suite, including validating the system&rsquo;s behavior when errors occur or assumptions are faulty.
+- Do not use concurrency when synchronous code will do the job.
+- Do not use ten layers of indirection when one layer will do the job.</p>
+
+<p>The manufacturers of the Therac-25 code incorrectly calculated their risks. They were so confident in their software that they removed
+hardware interlocks used in the previous Therac-20 model. As it turned out, the same bugs were present in the Therac-20 as the Therac-25,
+but were not noticed because the interlocks prevented accidents. Do not mistake absence of evidence for evidence of absence.</p>
+
+<hr>
+
+<p>1: &ldquo;Medical Devices: The Therac-25&rdquo;. Nancy Leveson, University of Washington. Via <a href="https://github.com/danluu/post-mortems">danluu/post-mortems</a></p>
+
+<p>2: &ldquo;Move fast and break things.&rdquo; Mark Zuckerberg, <a href="https://www.sec.gov/Archives/edgar/data/1326801/000119312512034517/d287954ds1.htm#toc287954_10">Facebook IPO filing</a>, 2012</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1"> <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2"> <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://github.com/therealplato">
+        <i class="fa fa-github-square"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/therealplato">
+        <i class="fa fa-twitter-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+    
+    <br>Generated by <a href="https://www.gohugo.io/">Hugo</a> from <a href="https://github.com/therealplato/therealplato.com">this
+      source</a>.
+    <br>Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    <br><i class="fa fa-heart" aria-hidden="true"></i> @therealplato
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://therealplato.com/js/jquery-2.2.4.min.js"></script>
+<script src="https://therealplato.com/js/main.js"></script>
+<script src="https://therealplato.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>

@@ -6,10 +6,20 @@
     <description>Recent content in Posts on therealplato.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Nov 2017 01:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://therealplato.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Breaking Production: Risk, Impact and Mitigations</title>
+      <link>https://therealplato.com/posts/breakingprod/</link>
+      <pubDate>Sun, 11 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://therealplato.com/posts/breakingprod/</guid>
+      <description>A hasty generalizer might categorize software into two buckets: &amp;ldquo;Works&amp;rdquo;, and &amp;ldquo;Doesn&amp;rsquo;t Work&amp;rdquo;. They&amp;rsquo;ve missed an exciting middle ground: &amp;ldquo;Works until it doesn&amp;rsquo;t.&amp;rdquo;
+package main func main(){} func (i code) am() string { return &amp;quot;kind of a big deal&amp;quot; } // prog.go:4:9: undefined: code  Risk The code above doesn&amp;rsquo;t compile and thus doesn&amp;rsquo;t run. &amp;ldquo;Deploying code&amp;rdquo; includes &amp;ldquo;making it run&amp;rdquo;, so we cannot successfully deploy this code. This is my favorite kind of failure - one that&amp;rsquo;s impossible to miss.</description>
+    </item>
     
     <item>
       <title>6 years of bitcoin youtube comments</title>
