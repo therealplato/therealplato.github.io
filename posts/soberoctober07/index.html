@@ -88,18 +88,15 @@ them</em>.</p>
 <p>For the rest of #soberoctober, I intend to explore this space.</p>
 
 <h3 id="how-to-check-battery-level-on-arch-linux">how to check battery level on arch linux</h3>
-
-<pre><code class="language-sh"> ~ Ω batt  
-0.56
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> ~ Ω batt  
+<span style="color:#ae81ff">0</span>.56
 
  ~ Ω which batt
-batt () {
-        X=$(cat /sys/class/power_supply/BAT0/energy_now) 
-        Y=$(cat /sys/class/power_supply/BAT0/energy_full) 
-        python2 -c &quot;z=$X/$Y.; print('%.2f' % z)&quot;
-}
-</code></pre>
-
+batt <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        X<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat /sys/class/power_supply/BAT0/energy_now<span style="color:#66d9ef">)</span> 
+        Y<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat /sys/class/power_supply/BAT0/energy_full<span style="color:#66d9ef">)</span> 
+        python2 -c <span style="color:#e6db74">&#34;z=</span>$X<span style="color:#e6db74">/</span>$Y<span style="color:#e6db74">.; print(&#39;%.2f&#39; % z)&#34;</span>
+<span style="color:#f92672">}</span></code></pre></div>
                 </section>
             </article>
 

@@ -113,18 +113,15 @@ aliases.  My next steps are documented in the repo&rsquo;s <a href="https://gith
 
 <p>If <code>timez</code> does not see a timestamp in its CLI args, it assumes you&rsquo;re asking about the current time.
 My first testcase is for such a scenario:</p>
-
-<pre><code class="language-go">type testcase struct {
-	name     string
-	input    string
-	expected string
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">testcase</span> <span style="color:#66d9ef">struct</span> {
+	<span style="color:#a6e22e">name</span>     <span style="color:#66d9ef">string</span>
+	<span style="color:#a6e22e">input</span>    <span style="color:#66d9ef">string</span>
+	<span style="color:#a6e22e">expected</span> <span style="color:#66d9ef">string</span>
 }
-testcase{&quot;empty input&quot;, &quot;&quot;,
-`Pacific/Auckland: 2017-10-10 23:01:30
-UTC: 2017-10-10 10:01:30
-`},
-</code></pre>
-
+<span style="color:#a6e22e">testcase</span>{<span style="color:#e6db74">&#34;empty input&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>,
+<span style="color:#e6db74">`Pacific/Auckland: 2017-10-10 23:01:30
+</span><span style="color:#e6db74">UTC: 2017-10-10 10:01:30
+</span><span style="color:#e6db74">`</span>},</code></pre></div>
 <p>There&rsquo;s a problem - I can&rsquo;t control the time or timezone when you run the tests. <code>time.Now()</code> is going to return something that does not
 match my <code>testcase.expected</code>. The solution is probably the most valuable programming skill I know: &ldquo;dependency injection.&rdquo;</p>
 
@@ -133,42 +130,30 @@ implementing all behaviors. My parent behavior is &ldquo;if there are no argumen
 My child behaviors are &ldquo;determine the local timezone&rdquo; and &ldquo;determine the current time&rdquo;.</p>
 
 <p>You can also inject state variables, but I&rsquo;m not using any here.</p>
-
-<pre><code class="language-go">func timez(c clocker, z zoner, args []string) string {
-  t0 = c.Now()
-  z0 = z.Zone()
-  return z0+t0   // simplified
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">timez</span>(<span style="color:#a6e22e">c</span> <span style="color:#a6e22e">clocker</span>, <span style="color:#a6e22e">z</span> <span style="color:#a6e22e">zoner</span>, <span style="color:#a6e22e">args</span> []<span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
+  <span style="color:#a6e22e">t0</span> = <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Now</span>()
+  <span style="color:#a6e22e">z0</span> = <span style="color:#a6e22e">z</span>.<span style="color:#a6e22e">Zone</span>()
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">z0</span><span style="color:#f92672">+</span><span style="color:#a6e22e">t0</span>   <span style="color:#f92672">//</span> <span style="color:#a6e22e">simplified</span></code></pre></div>
 <p>If my main function is executing, I inject the &ldquo;real&rdquo; dependencies into <code>timez</code> :</p>
-
-<pre><code class="language-go">func main() {
-  c := &amp;clock{}
-  z := &amp;zone{}
-  timez(c, z, args)
-}
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+  <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">clock</span>{}
+  <span style="color:#a6e22e">z</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">zone</span>{}
+  <span style="color:#a6e22e">timez</span>(<span style="color:#a6e22e">c</span>, <span style="color:#a6e22e">z</span>, <span style="color:#a6e22e">args</span>)
+}</code></pre></div>
 <p>But when I&rsquo;m testing <code>timez</code>, I pass it a mock clock and timezone, whose values I can control:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">z0</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">LoadLocation</span>(<span style="color:#e6db74">&#34;Pacific/Auckland&#34;</span>)
+<span style="color:#a6e22e">z</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">mockZone</span>{}
+<span style="color:#a6e22e">z</span>.<span style="color:#a6e22e">On</span>(<span style="color:#e6db74">&#34;Zone&#34;</span>).<span style="color:#a6e22e">Return</span>(<span style="color:#a6e22e">z0</span>)
 
-<pre><code class="language-go">z0, err := time.LoadLocation(&quot;Pacific/Auckland&quot;)
-z := &amp;mockZone{}
-z.On(&quot;Zone&quot;).Return(z0)
+<span style="color:#a6e22e">t0</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#e6db74">&#34;2006-01-02 15:04:05-0700&#34;</span>, <span style="color:#e6db74">&#34;2017-10-10 23:01:30+1300&#34;</span>)
+<span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">mockClock</span>{}
+<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">On</span>(<span style="color:#e6db74">&#34;Now&#34;</span>).<span style="color:#a6e22e">Return</span>(<span style="color:#a6e22e">t0</span>)
 
-t0, err := time.Parse(&quot;2006-01-02 15:04:05-0700&quot;, &quot;2017-10-10 23:01:30+1300&quot;)
-c := &amp;mockClock{}
-c.On(&quot;Now&quot;).Return(t0)
-
-out := timez(c, z, args)
-</code></pre>
-
+<span style="color:#a6e22e">out</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">timez</span>(<span style="color:#a6e22e">c</span>, <span style="color:#a6e22e">z</span>, <span style="color:#a6e22e">args</span>)</code></pre></div>
 <p>Passing these different types to the same functions works thanks to Go&rsquo;s interfaces. In the <code>timez</code> function signature you saw it accepts <code>clocker</code>:</p>
-
-<pre><code class="language-go">type clocker interface {
-	Now() time.Time
-}
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">clocker</span> <span style="color:#66d9ef">interface</span> {
+	<span style="color:#a6e22e">Now</span>() <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Time</span>
+}</code></pre></div>
 <p>Both my <code>clock</code> and <code>mockClock</code> types have a method <code>Now()</code> returning a <code>time.Time</code>. Thus they both &ldquo;fulfil the <code>clocker</code> interface&rdquo; and are
 acceptable inputs to the <code>timez</code> function. You can see both <code>clock</code> and <code>mockClock</code> implementations in
 <a href="https://github.com/therealplato/timez/blob/6c25bf2b3d2d571b353d8c106605ec933f12f585/clock.go"><code>clock.go</code></a>.</p>

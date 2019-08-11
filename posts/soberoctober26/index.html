@@ -85,39 +85,37 @@ will be a lot of sweat and tears before I&rsquo;ve got a finished file that I&rs
 <li>Label the lines with the <a href="https://boardgames.stackexchange.com/questions/11550/what-are-the-names-for-magics-different-colour-combinations/11563">names of the corresponding tribes</a>.<br /></li>
 
 <li><p>Off to the side, place this code to reference parts of a turn:</p>
-
-<pre><code class="language-go">func turn() {
-  beginning: {
-    untap()
-    upkeep()
-    draw()
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">turn</span>() {
+  <span style="color:#a6e22e">beginning</span>: {
+    <span style="color:#a6e22e">untap</span>()
+    <span style="color:#a6e22e">upkeep</span>()
+    <span style="color:#a6e22e">draw</span>()
   }
-  main1: {
-    if !landThisTurn {
-      playLand()
+  <span style="color:#a6e22e">main1</span>: {
+    <span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">landThisTurn</span> {
+      <span style="color:#a6e22e">playLand</span>()
     }
-    castSpells()
+    <span style="color:#a6e22e">castSpells</span>()
   }
-  combat: {
-    begin()
-    declareAttackers()
-    declareBlockers()
-    combatDamage()
-    end()
+  <span style="color:#a6e22e">combat</span>: {
+    <span style="color:#a6e22e">begin</span>()
+    <span style="color:#a6e22e">declareAttackers</span>()
+    <span style="color:#a6e22e">declareBlockers</span>()
+    <span style="color:#a6e22e">combatDamage</span>()
+    <span style="color:#a6e22e">end</span>()
   }
-  main2: {
-    if !landThisTurn {
-      playLand()
+  <span style="color:#a6e22e">main2</span>: {
+    <span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">landThisTurn</span> {
+      <span style="color:#a6e22e">playLand</span>()
     }
-    castSpells()
+    <span style="color:#a6e22e">castSpells</span>()
   }
 
-  end: {
-    endStep()
-    cleanupDmg()
+  <span style="color:#a6e22e">end</span>: {
+    <span style="color:#a6e22e">endStep</span>()
+    <span style="color:#a6e22e">cleanupDmg</span>()
   }
-}
-</code></pre></li>
+}</code></pre></div></li>
 </ul>
 
                 </section>
