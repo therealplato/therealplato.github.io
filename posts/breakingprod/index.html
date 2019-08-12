@@ -56,7 +56,7 @@
                     </h1>
                     <h2 class="headline">
                     Aug 11, 2019 00:00
-                    · 1230 words
+                    · 1233 words
                     · 6 minutes read
                       <span class="tags">
                       
@@ -172,10 +172,10 @@ weighing them too low. Recalculate when new information becomes available.</p>
 
 <h5 id="minimize-impact">Minimize Impact</h5>
 
-<p>Build systems that handle known failure modes, but let the engineers handle unknown failure modes:</p>
+<p>Build systems that have code paths for known failure modes, but let the engineers handle unknown failure modes:</p>
 
 <ul>
-<li>Build high-availability systems with multiple replicas to minimize impact when networking or hardware problems make a service unavailable.</li>
+<li>Use high-availability designs with multiple replicas to minimize impact when networking or hardware problems make a service unavailable.</li>
 <li>Retry after transient failures (but not indefinitely.)</li>
 <li>Retry if dependencies are unavailable at system startup (but not indefinitely.)</li>
 <li>Do not take zero action when an error or exception is encountered.</li>
