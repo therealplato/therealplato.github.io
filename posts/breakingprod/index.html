@@ -55,8 +55,8 @@
                         Breaking Production: Risk, Impact and Mitigations
                     </h1>
                     <h2 class="headline">
-                    Aug 11, 2019 00:00
-                    · 1233 words
+                    Aug 12, 2019 00:00
+                    · 1277 words
                     · 6 minutes read
                       <span class="tags">
                       
@@ -150,21 +150,23 @@ mathematical calculus is exact but risk is fuzzy. Let&rsquo;s give it a go:</p>
 tests, and identifying previously unknown assumptions. The value of this learning experience often exceeds the costs of failure. (<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>)</p>
 
 <p>It&rsquo;s up to the business to put numbers on the costs and benefits, or at least to assign relative weights. The engineers building and
-operating the system should be willing to explain their own risk calculus when it differs from the business&rsquo;s calculus. This notably
-includes scenarios where an engineer identifies an ethical impact that was overlooked or undervalued by the business.</p>
+operating the system should explain their own risk calculus when it differs from the business&rsquo;s calculus. This notably includes scenarios
+where an engineer identifies an ethical impact that was overlooked or undervalued by the business. If no acceptable mitigation is found,
+refusing to participate in the project may be the most ethical option available.</p>
 
-<p>It&rsquo;s also worth reiterating that perfect information is almost never available. Weighing risks and impacts higher than reality is safer than
-weighing them too low. Recalculate when new information becomes available.</p>
+<p>It&rsquo;s also worth reiterating that perfect information is almost never available. Weighing risks and impacts higher than their reality is
+safer than weighing them too low, but be aware of the trap of trying to <em>eliminate</em> risks rather than <em>mitigate</em> them: at some point, the
+time and effort spent exceeds the costs of failure. Reassess the risk calculus as new information becomes available.</p>
 
 <h4 id="mitigations">Mitigations</h4>
 
-<p>Engineering is all about optimizing tradeoffs. In the context of risk mitigation, I&rsquo;ve seen several approaches:</p>
+<p>Engineering is all about optimizing tradeoffs. I&rsquo;ve seen several approaches to risk mitigation:</p>
 
 <ul>
 <li>Code nothing: We can&rsquo;t break anything.</li>
 <li>Code poorly: We&rsquo;ll get a follow-on contract to fix our bugs.</li>
 <li>Minimize impact: Write code that breaks gracefully.</li>
-<li>Minimize risk: Write code that has very low chance of breaking.</li>
+<li>Minimize risk: Write code that will almost certainly not break.</li>
 <li>Maximize benefit: Write code that is so valuable that users tolerate breakage.</li>
 </ul>
 
