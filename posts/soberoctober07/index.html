@@ -10,6 +10,7 @@
 		<title>#soberoctober day 7: one of us &middot; therealplato.com</title>
 		<link rel="shortcut icon" href="https://therealplato.com/images/favicon.ico">
 		<link rel="stylesheet" href="https://therealplato.com/css/style.css">
+		<link rel="stylesheet" href="https://therealplato.com/css/highlight.css">
 		
 
 		
@@ -87,15 +88,15 @@ them</em>.</p>
 <p>For the rest of #soberoctober, I intend to explore this space.</p>
 
 <h3 id="how-to-check-battery-level-on-arch-linux">how to check battery level on arch linux</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> ~ Ω batt  
-<span style="color:#ff0;font-weight:bold">0</span>.56
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> ~ Ω batt  
+<span style="color:#099">0</span>.56
 
  ~ Ω which batt
-batt () {
-        X=<span style="color:#fff;font-weight:bold">$(</span>cat /sys/class/power_supply/BAT0/energy_now<span style="color:#fff;font-weight:bold">)</span> 
-        Y=<span style="color:#fff;font-weight:bold">$(</span>cat /sys/class/power_supply/BAT0/energy_full<span style="color:#fff;font-weight:bold">)</span> 
-        python2 -c <span style="color:#0ff;font-weight:bold">&#34;z=</span>$X<span style="color:#0ff;font-weight:bold">/</span>$Y<span style="color:#0ff;font-weight:bold">.; print(&#39;%.2f&#39; % z)&#34;</span>
-}</code></pre></div>
+batt <span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#008080">X</span><span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">$(</span>cat /sys/class/power_supply/BAT0/energy_now<span style="color:#000;font-weight:bold">)</span> 
+        <span style="color:#008080">Y</span><span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">$(</span>cat /sys/class/power_supply/BAT0/energy_full<span style="color:#000;font-weight:bold">)</span> 
+        python2 -c <span style="color:#d14">&#34;z=</span><span style="color:#008080">$X</span><span style="color:#d14">/</span><span style="color:#008080">$Y</span><span style="color:#d14">.; print(&#39;%.2f&#39; % z)&#34;</span>
+<span style="color:#000;font-weight:bold">}</span></code></pre></div>
                 </section>
             </article>
 
