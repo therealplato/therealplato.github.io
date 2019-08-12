@@ -56,7 +56,7 @@
                     </h1>
                     <h2 class="headline">
                     Aug 11, 2019 00:00
-                    · 1221 words
+                    · 1230 words
                     · 6 minutes read
                       <span class="tags">
                       
@@ -188,14 +188,15 @@ weighing them too low. Recalculate when new information becomes available.</p>
 <p>Code defensively. Assume the worst and try to code around it:</p>
 
 <ul>
-<li>Do not blindly assume that code, whether first party or third party, behaves as expected.  Write validation or tests to confirm the
-behavior. Don&rsquo;t be afraid of checking assumptions repeatedly.</li>
+<li>Do not blindly assume that code, whether first party or third party, behaves as expected. Verify its behavior with tests and/or runtime
+checks. Don&rsquo;t be afraid of checking assumptions repeatedly.</li>
+<li>Have a comprehensive test suite. Put more time into testing failure cases than success cases, including tests that validate the system
+fails as planned when assumptions are faulty.</li>
 <li>Make services as independent as reasonably possible to minimize change risk. For instance, instead of having two services share a database
 table, give one service responsibility for maintaining that table and expose an API through which other services can use the table.</li>
 <li>Gradually roll out changes that touch multiple services, rather than all at once.</li>
-<li>Have a comprehensive test suite, including validating the system&rsquo;s behavior when errors occur or assumptions are faulty.</li>
-<li>Do not use concurrency when synchronous code will do the job.</li>
-<li>Do not use ten layers of indirection when one layer will do the job.</li>
+<li>Do not use concurrency when synchronous code is an option.</li>
+<li>Do not use ten layers of indirection when two layers will be maintainable.</li>
 </ul>
 
 <p>The manufacturers of the Therac-25 code incorrectly calculated their risks. They were so confident in their software that they removed
